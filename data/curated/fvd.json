@@ -1,0 +1,4931 @@
+{
+ "_note": "Curated, non-ODK content. lib: regional action library per pillar number. reportActs: country report actions per country id and pillar number. tracker/evidence: seed records (illustrative in prototype).",
+ "lib": {},
+ "reportActs": {},
+ "tracker": [],
+ "evidence": [
+  {
+   "c": "angola",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_1a-01_sop.pdf",
+   "up": "2026-07-23"
+  },
+  {
+   "c": "angola",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "angola",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "angola",
+   "p": 1,
+   "q": "1a.11",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_1a-11_plan.pdf",
+   "up": "2026-08-25"
+  },
+  {
+   "c": "angola",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_2-02_plan.pdf",
+   "up": "2026-06-08"
+  },
+  {
+   "c": "angola",
+   "p": 2,
+   "q": "2.03",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_2-03_sop.pdf",
+   "up": "2026-06-02"
+  },
+  {
+   "c": "angola",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_2-04_list.pdf",
+   "up": "2026-07-05"
+  },
+  {
+   "c": "angola",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_2-06_sop.pdf",
+   "up": "2026-08-20"
+  },
+  {
+   "c": "angola",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_3-01_plan.pdf",
+   "up": "2026-06-07"
+  },
+  {
+   "c": "angola",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_3-04_sop.pdf",
+   "up": "2026-08-10"
+  },
+  {
+   "c": "angola",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "angola",
+   "p": 3,
+   "q": "3.07",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_3-07_plan.pdf",
+   "up": "2026-07-06"
+  },
+  {
+   "c": "angola",
+   "p": 3,
+   "q": "3.08",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_3-08_report.pdf",
+   "up": "2026-06-02"
+  },
+  {
+   "c": "angola",
+   "p": 4,
+   "q": "4.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_4-02_list.pdf",
+   "up": "2026-07-01"
+  },
+  {
+   "c": "angola",
+   "p": 4,
+   "q": "4.03",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "angola",
+   "p": 4,
+   "q": "4.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_4-06_report.pdf",
+   "up": "2026-08-15"
+  },
+  {
+   "c": "angola",
+   "p": 5,
+   "q": "5.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_5-04_sop.pdf",
+   "up": "2026-06-24"
+  },
+  {
+   "c": "angola",
+   "p": 5,
+   "q": "5.10",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "angola",
+   "p": 6,
+   "q": "6.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_6-05_plan.pdf",
+   "up": "2026-06-20"
+  },
+  {
+   "c": "angola",
+   "p": 6,
+   "q": "6.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_6-06_list.pdf",
+   "up": "2026-08-16"
+  },
+  {
+   "c": "angola",
+   "p": 6,
+   "q": "6.07",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_6-07_report.pdf",
+   "up": "2026-08-18"
+  },
+  {
+   "c": "angola",
+   "p": 7,
+   "q": "7.01",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "angola",
+   "p": 7,
+   "q": "7.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_7-04_list.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "angola",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_8-02_report.pdf",
+   "up": "2026-08-14"
+  },
+  {
+   "c": "angola",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_8-06_sop.pdf",
+   "up": "2026-08-08"
+  },
+  {
+   "c": "angola",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_8-08_plan.pdf",
+   "up": "2026-07-03"
+  },
+  {
+   "c": "angola",
+   "p": 8,
+   "q": "8.09",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_8-09_report.pdf",
+   "up": "2026-08-04"
+  },
+  {
+   "c": "angola",
+   "p": 8,
+   "q": "8.15",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_8-15_report.pdf",
+   "up": "2026-06-19"
+  },
+  {
+   "c": "angola",
+   "p": 9,
+   "q": "9.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_9-06_list.pdf",
+   "up": "2026-07-21"
+  },
+  {
+   "c": "angola",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "angola",
+   "p": 10,
+   "q": "11.05",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "angola",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_11-12_report.pdf",
+   "up": "2026-07-25"
+  },
+  {
+   "c": "angola",
+   "p": 10,
+   "q": "11.19",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_11-19_sop.pdf",
+   "up": "2026-07-09"
+  },
+  {
+   "c": "angola",
+   "p": 10,
+   "q": "11.20",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_11-20_sop.pdf",
+   "up": "2026-07-09"
+  },
+  {
+   "c": "angola",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "AGO_12-01_list.pdf",
+   "up": "2026-07-24"
+  },
+  {
+   "c": "angola",
+   "p": 11,
+   "q": "12.07",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "AGO_12-07_report.pdf",
+   "up": "2026-06-07"
+  },
+  {
+   "c": "burundi",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_1a-01_report.pdf",
+   "up": "2026-06-20"
+  },
+  {
+   "c": "burundi",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_1a-03_report.pdf",
+   "up": "2026-08-22"
+  },
+  {
+   "c": "burundi",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_1a-04_plan.pdf",
+   "up": "2026-07-16"
+  },
+  {
+   "c": "burundi",
+   "p": 1,
+   "q": "1a.11",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_1a-11_plan.pdf",
+   "up": "2026-07-22"
+  },
+  {
+   "c": "burundi",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_1a-15_list.pdf",
+   "up": "2026-07-05"
+  },
+  {
+   "c": "burundi",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "burundi",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_2-04_sop.pdf",
+   "up": "2026-08-25"
+  },
+  {
+   "c": "burundi",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_2-06_report.pdf",
+   "up": "2026-07-05"
+  },
+  {
+   "c": "burundi",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "burundi",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_3-05_plan.pdf",
+   "up": "2026-07-13"
+  },
+  {
+   "c": "burundi",
+   "p": 3,
+   "q": "3.07",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "burundi",
+   "p": 3,
+   "q": "3.08",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_3-08_list.pdf",
+   "up": "2026-06-21"
+  },
+  {
+   "c": "burundi",
+   "p": 4,
+   "q": "4.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_4-02_report.pdf",
+   "up": "2026-07-13"
+  },
+  {
+   "c": "burundi",
+   "p": 4,
+   "q": "4.03",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_4-03_plan.pdf",
+   "up": "2026-08-18"
+  },
+  {
+   "c": "burundi",
+   "p": 4,
+   "q": "4.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_4-04_list.pdf",
+   "up": "2026-06-18"
+  },
+  {
+   "c": "burundi",
+   "p": 4,
+   "q": "4.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_4-06_report.pdf",
+   "up": "2026-07-01"
+  },
+  {
+   "c": "burundi",
+   "p": 4,
+   "q": "4.10",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_4-10_sop.pdf",
+   "up": "2026-08-19"
+  },
+  {
+   "c": "burundi",
+   "p": 5,
+   "q": "5.03",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "burundi",
+   "p": 5,
+   "q": "5.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_5-04_report.pdf",
+   "up": "2026-06-14"
+  },
+  {
+   "c": "burundi",
+   "p": 5,
+   "q": "5.10",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_5-10_plan.pdf",
+   "up": "2026-07-12"
+  },
+  {
+   "c": "burundi",
+   "p": 6,
+   "q": "6.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_6-04_sop.pdf",
+   "up": "2026-06-01"
+  },
+  {
+   "c": "burundi",
+   "p": 6,
+   "q": "6.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_6-05_plan.pdf",
+   "up": "2026-08-16"
+  },
+  {
+   "c": "burundi",
+   "p": 6,
+   "q": "6.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_6-06_sop.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "burundi",
+   "p": 7,
+   "q": "7.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_7-01_plan.pdf",
+   "up": "2026-06-17"
+  },
+  {
+   "c": "burundi",
+   "p": 7,
+   "q": "7.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_7-04_report.pdf",
+   "up": "2026-08-08"
+  },
+  {
+   "c": "burundi",
+   "p": 7,
+   "q": "7.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_7-06_list.pdf",
+   "up": "2026-07-02"
+  },
+  {
+   "c": "burundi",
+   "p": 8,
+   "q": "8.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_8-01_sop.pdf",
+   "up": "2026-06-07"
+  },
+  {
+   "c": "burundi",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_8-02_sop.pdf",
+   "up": "2026-07-24"
+  },
+  {
+   "c": "burundi",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_8-06_plan.pdf",
+   "up": "2026-06-14"
+  },
+  {
+   "c": "burundi",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_8-08_report.pdf",
+   "up": "2026-08-01"
+  },
+  {
+   "c": "burundi",
+   "p": 8,
+   "q": "8.09",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_8-09_list.pdf",
+   "up": "2026-08-06"
+  },
+  {
+   "c": "burundi",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "burundi",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "burundi",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_11-12_plan.pdf",
+   "up": "2026-06-12"
+  },
+  {
+   "c": "burundi",
+   "p": 10,
+   "q": "11.19",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_11-19_list.pdf",
+   "up": "2026-07-26"
+  },
+  {
+   "c": "burundi",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "BDI_12-01_plan.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "burundi",
+   "p": 11,
+   "q": "12.07",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "BDI_12-07_list.pdf",
+   "up": "2026-07-24"
+  },
+  {
+   "c": "cameroon",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CMR_1a-01_plan.pdf",
+   "up": "2026-06-11"
+  },
+  {
+   "c": "cameroon",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "CMR_1a-15_report.pdf",
+   "up": "2026-06-23"
+  },
+  {
+   "c": "cameroon",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CMR_1b-01_report.pdf",
+   "up": "2026-07-08"
+  },
+  {
+   "c": "cameroon",
+   "p": 1,
+   "q": "1b.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CMR_1b-06_report.pdf",
+   "up": "2026-08-09"
+  },
+  {
+   "c": "cameroon",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "cameroon",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "CMR_2-04_list.pdf",
+   "up": "2026-06-02"
+  },
+  {
+   "c": "cameroon",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "CMR_2-06_report.pdf",
+   "up": "2026-06-06"
+  },
+  {
+   "c": "cameroon",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CMR_3-01_plan.pdf",
+   "up": "2026-07-12"
+  },
+  {
+   "c": "cameroon",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CMR_3-04_report.pdf",
+   "up": "2026-06-09"
+  },
+  {
+   "c": "cameroon",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CMR_3-05_sop.pdf",
+   "up": "2026-06-24"
+  },
+  {
+   "c": "cameroon",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CMR_8-02_plan.pdf",
+   "up": "2026-06-26"
+  },
+  {
+   "c": "cameroon",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CMR_11-02_list.pdf",
+   "up": "2026-06-18"
+  },
+  {
+   "c": "cameroon",
+   "p": 10,
+   "q": "11.19",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "cameroon",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "CMR_12-01_sop.pdf",
+   "up": "2026-08-09"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_1a-01_sop.pdf",
+   "up": "2026-07-03"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "CAF_1a-04_list.pdf",
+   "up": "2026-06-03"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 1,
+   "q": "1a.12",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_1a-15_sop.pdf",
+   "up": "2026-06-16"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 1,
+   "q": "1b.06",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "CAF_2-02_report.pdf",
+   "up": "2026-08-24"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_2-04_sop.pdf",
+   "up": "2026-08-20"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "CAF_2-06_sop.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_3-01_list.pdf",
+   "up": "2026-06-16"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_3-05_plan.pdf",
+   "up": "2026-08-14"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 4,
+   "q": "4.02",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 6,
+   "q": "6.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_6-04_plan.pdf",
+   "up": "2026-08-24"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 6,
+   "q": "6.07",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_6-07_sop.pdf",
+   "up": "2026-08-24"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 7,
+   "q": "7.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_7-06_plan.pdf",
+   "up": "2026-07-22"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 8,
+   "q": "8.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_8-01_plan.pdf",
+   "up": "2026-07-16"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "CAF_8-02_plan.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 8,
+   "q": "8.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_9-04_list.pdf",
+   "up": "2026-06-07"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_11-02_report.pdf",
+   "up": "2026-07-25"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 10,
+   "q": "11.19",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "CAF_11-19_plan.pdf",
+   "up": "2026-06-22"
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 10,
+   "q": "11.20",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "centralafricanrepublic",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "CAF_12-01_list.pdf",
+   "up": "2026-08-24"
+  },
+  {
+   "c": "chad",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2023-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "chad",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2023-Q3",
+   "st": "verified",
+   "file": "TCD_1a-03_report.pdf",
+   "up": "2026-07-01"
+  },
+  {
+   "c": "chad",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2023-Q3",
+   "st": "pending",
+   "file": "TCD_1a-04_plan.pdf",
+   "up": "2026-07-09"
+  },
+  {
+   "c": "chad",
+   "p": 1,
+   "q": "1a.10",
+   "round": "2023-Q3",
+   "st": "verified",
+   "file": "TCD_1a-10_plan.pdf",
+   "up": "2026-08-03"
+  },
+  {
+   "c": "chad",
+   "p": 1,
+   "q": "1a.11",
+   "round": "2023-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "chad",
+   "p": 1,
+   "q": "1a.12",
+   "round": "2023-Q3",
+   "st": "verified",
+   "file": "TCD_1a-12_plan.pdf",
+   "up": "2026-06-23"
+  },
+  {
+   "c": "chad",
+   "p": 1,
+   "q": "1a.14",
+   "round": "2023-Q3",
+   "st": "pending",
+   "file": "TCD_1a-14_sop.pdf",
+   "up": "2026-07-16"
+  },
+  {
+   "c": "chad",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2023-Q3",
+   "st": "verified",
+   "file": "TCD_1a-15_sop.pdf",
+   "up": "2026-08-07"
+  },
+  {
+   "c": "chad",
+   "p": 1,
+   "q": "1b.06",
+   "round": "2023-Q3",
+   "st": "pending",
+   "file": "TCD_1b-06_list.pdf",
+   "up": "2026-06-08"
+  },
+  {
+   "c": "chad",
+   "p": 2,
+   "q": "2.02",
+   "round": "2023-Q3",
+   "st": "pending",
+   "file": "TCD_2-02_report.pdf",
+   "up": "2026-08-15"
+  },
+  {
+   "c": "chad",
+   "p": 2,
+   "q": "2.04",
+   "round": "2023-Q3",
+   "st": "pending",
+   "file": "TCD_2-04_plan.pdf",
+   "up": "2026-08-15"
+  },
+  {
+   "c": "chad",
+   "p": 3,
+   "q": "3.08",
+   "round": "2023-Q3",
+   "st": "verified",
+   "file": "TCD_3-08_report.pdf",
+   "up": "2026-06-21"
+  },
+  {
+   "c": "chad",
+   "p": 4,
+   "q": "4.02",
+   "round": "2023-Q3",
+   "st": "pending",
+   "file": "TCD_4-02_sop.pdf",
+   "up": "2026-08-03"
+  },
+  {
+   "c": "chad",
+   "p": 4,
+   "q": "4.03",
+   "round": "2023-Q3",
+   "st": "verified",
+   "file": "TCD_4-03_report.pdf",
+   "up": "2026-07-05"
+  },
+  {
+   "c": "chad",
+   "p": 4,
+   "q": "4.09",
+   "round": "2023-Q3",
+   "st": "pending",
+   "file": "TCD_4-09_list.pdf",
+   "up": "2026-07-08"
+  },
+  {
+   "c": "chad",
+   "p": 10,
+   "q": "11.02",
+   "round": "2023-Q3",
+   "st": "verified",
+   "file": "TCD_11-02_plan.pdf",
+   "up": "2026-08-15"
+  },
+  {
+   "c": "chad",
+   "p": 10,
+   "q": "11.12",
+   "round": "2023-Q3",
+   "st": "pending",
+   "file": "TCD_11-12_plan.pdf",
+   "up": "2026-07-21"
+  },
+  {
+   "c": "chad",
+   "p": 11,
+   "q": "12.07",
+   "round": "2023-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "republicofcongo",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "COG_2-02_list.pdf",
+   "up": "2026-06-21"
+  },
+  {
+   "c": "republicofcongo",
+   "p": 2,
+   "q": "2.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "COG_2-03_list.pdf",
+   "up": "2026-07-19"
+  },
+  {
+   "c": "republicofcongo",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "COG_2-04_list.pdf",
+   "up": "2026-06-19"
+  },
+  {
+   "c": "republicofcongo",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "COG_2-06_sop.pdf",
+   "up": "2026-07-01"
+  },
+  {
+   "c": "republicofcongo",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "COG_3-01_plan.pdf",
+   "up": "2026-08-02"
+  },
+  {
+   "c": "republicofcongo",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "republicofcongo",
+   "p": 8,
+   "q": "8.01",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "republicofcongo",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "COG_8-02_report.pdf",
+   "up": "2026-06-09"
+  },
+  {
+   "c": "republicofcongo",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "COG_8-06_plan.pdf",
+   "up": "2026-06-04"
+  },
+  {
+   "c": "republicofcongo",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "republicofcongo",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "COG_9-04_plan.pdf",
+   "up": "2026-07-27"
+  },
+  {
+   "c": "republicofcongo",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "COG_11-02_plan.pdf",
+   "up": "2026-08-18"
+  },
+  {
+   "c": "republicofcongo",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "republicofcongo",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "COG_12-01_list.pdf",
+   "up": "2026-08-22"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_1a-03_list.pdf",
+   "up": "2026-08-16"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_1a-04_sop.pdf",
+   "up": "2026-08-12"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1a.10",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_1a-10_list.pdf",
+   "up": "2026-07-19"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1a.11",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_1a-11_list.pdf",
+   "up": "2026-06-10"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1a.12",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1a.14",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_1a-14_sop.pdf",
+   "up": "2026-07-14"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_1a-15_plan.pdf",
+   "up": "2026-08-06"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_1b-01_sop.pdf",
+   "up": "2026-07-03"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1b.04",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_1b-04_list.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 1,
+   "q": "1b.05",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_1b-05_sop.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 2,
+   "q": "2.03",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_2-03_sop.pdf",
+   "up": "2026-08-02"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_2-06_list.pdf",
+   "up": "2026-07-16"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_3-01_list.pdf",
+   "up": "2026-07-14"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_3-04_report.pdf",
+   "up": "2026-07-18"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_3-05_report.pdf",
+   "up": "2026-06-13"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 3,
+   "q": "3.07",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_3-07_plan.pdf",
+   "up": "2026-06-19"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 3,
+   "q": "3.08",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_3-08_plan.pdf",
+   "up": "2026-08-09"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 4,
+   "q": "4.02",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 4,
+   "q": "4.03",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_4-03_plan.pdf",
+   "up": "2026-08-15"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 4,
+   "q": "4.04",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_4-04_plan.pdf",
+   "up": "2026-06-16"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 4,
+   "q": "4.06",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_4-06_plan.pdf",
+   "up": "2026-06-09"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 4,
+   "q": "4.09",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_4-09_report.pdf",
+   "up": "2026-08-10"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 4,
+   "q": "4.10",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 4,
+   "q": "4.12",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_4-12_list.pdf",
+   "up": "2026-06-12"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 5,
+   "q": "5.03",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_5-03_sop.pdf",
+   "up": "2026-06-11"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 5,
+   "q": "5.04",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_5-04_list.pdf",
+   "up": "2026-07-15"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 5,
+   "q": "5.07",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_5-07_plan.pdf",
+   "up": "2026-07-16"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 5,
+   "q": "5.10",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_5-10_sop.pdf",
+   "up": "2026-06-22"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 6,
+   "q": "6.04",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 6,
+   "q": "6.05",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_6-05_report.pdf",
+   "up": "2026-07-14"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 6,
+   "q": "6.06",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_6-06_plan.pdf",
+   "up": "2026-07-26"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 6,
+   "q": "6.07",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_6-07_plan.pdf",
+   "up": "2026-08-07"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 7,
+   "q": "7.01",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_7-01_list.pdf",
+   "up": "2026-06-22"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 7,
+   "q": "7.04",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_7-04_report.pdf",
+   "up": "2026-08-19"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 8,
+   "q": "8.01",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_8-02_report.pdf",
+   "up": "2026-07-14"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 8,
+   "q": "8.04",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_8-06_list.pdf",
+   "up": "2026-07-25"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_8-08_sop.pdf",
+   "up": "2026-06-21"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 8,
+   "q": "8.09",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 8,
+   "q": "8.15",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_8-15_sop.pdf",
+   "up": "2026-08-27"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 9,
+   "q": "9.03",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_9-03_sop.pdf",
+   "up": "2026-08-09"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 9,
+   "q": "9.06",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_9-06_sop.pdf",
+   "up": "2026-08-01"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_11-02_report.pdf",
+   "up": "2026-06-22"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 10,
+   "q": "11.09",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_11-09_report.pdf",
+   "up": "2026-08-08"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 10,
+   "q": "11.10",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_11-10_report.pdf",
+   "up": "2026-08-08"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_11-12_report.pdf",
+   "up": "2026-06-22"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 10,
+   "q": "11.19",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "COD_11-19_plan.pdf",
+   "up": "2026-07-27"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "COD_12-01_list.pdf",
+   "up": "2026-06-20"
+  },
+  {
+   "c": "democraticrepublicofthecongo",
+   "p": 11,
+   "q": "12.07",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "gabon",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_1a-01_report.pdf",
+   "up": "2026-08-01"
+  },
+  {
+   "c": "gabon",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_1a-04_report.pdf",
+   "up": "2026-08-23"
+  },
+  {
+   "c": "gabon",
+   "p": 1,
+   "q": "1a.10",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_1a-10_plan.pdf",
+   "up": "2026-08-21"
+  },
+  {
+   "c": "gabon",
+   "p": 1,
+   "q": "1a.11",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_1a-11_sop.pdf",
+   "up": "2026-08-04"
+  },
+  {
+   "c": "gabon",
+   "p": 1,
+   "q": "1a.12",
+   "round": "2023-Q2",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "gabon",
+   "p": 1,
+   "q": "1a.14",
+   "round": "2023-Q2",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "gabon",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_1a-15_plan.pdf",
+   "up": "2026-08-25"
+  },
+  {
+   "c": "gabon",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_1b-01_sop.pdf",
+   "up": "2026-08-06"
+  },
+  {
+   "c": "gabon",
+   "p": 2,
+   "q": "2.02",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_2-02_sop.pdf",
+   "up": "2026-07-20"
+  },
+  {
+   "c": "gabon",
+   "p": 2,
+   "q": "2.04",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_2-04_sop.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "gabon",
+   "p": 2,
+   "q": "2.06",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_2-06_sop.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "gabon",
+   "p": 2,
+   "q": "2.10",
+   "round": "2023-Q2",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "gabon",
+   "p": 3,
+   "q": "3.04",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_3-04_sop.pdf",
+   "up": "2026-08-23"
+  },
+  {
+   "c": "gabon",
+   "p": 3,
+   "q": "3.07",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_3-07_plan.pdf",
+   "up": "2026-08-19"
+  },
+  {
+   "c": "gabon",
+   "p": 4,
+   "q": "4.02",
+   "round": "2023-Q2",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "gabon",
+   "p": 4,
+   "q": "4.03",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_4-03_list.pdf",
+   "up": "2026-06-09"
+  },
+  {
+   "c": "gabon",
+   "p": 4,
+   "q": "4.06",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_4-06_list.pdf",
+   "up": "2026-07-17"
+  },
+  {
+   "c": "gabon",
+   "p": 4,
+   "q": "4.09",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_4-09_report.pdf",
+   "up": "2026-06-14"
+  },
+  {
+   "c": "gabon",
+   "p": 4,
+   "q": "4.10",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_4-10_plan.pdf",
+   "up": "2026-06-21"
+  },
+  {
+   "c": "gabon",
+   "p": 5,
+   "q": "5.10",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_5-10_report.pdf",
+   "up": "2026-07-17"
+  },
+  {
+   "c": "gabon",
+   "p": 6,
+   "q": "6.04",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_6-04_report.pdf",
+   "up": "2026-07-07"
+  },
+  {
+   "c": "gabon",
+   "p": 6,
+   "q": "6.05",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_6-05_report.pdf",
+   "up": "2026-06-26"
+  },
+  {
+   "c": "gabon",
+   "p": 6,
+   "q": "6.07",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_6-07_report.pdf",
+   "up": "2026-06-26"
+  },
+  {
+   "c": "gabon",
+   "p": 7,
+   "q": "7.01",
+   "round": "2023-Q2",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "gabon",
+   "p": 7,
+   "q": "7.04",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_7-04_plan.pdf",
+   "up": "2026-07-12"
+  },
+  {
+   "c": "gabon",
+   "p": 7,
+   "q": "7.06",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_7-06_sop.pdf",
+   "up": "2026-07-11"
+  },
+  {
+   "c": "gabon",
+   "p": 8,
+   "q": "8.01",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_8-01_report.pdf",
+   "up": "2026-08-16"
+  },
+  {
+   "c": "gabon",
+   "p": 8,
+   "q": "8.02",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_8-02_plan.pdf",
+   "up": "2026-06-04"
+  },
+  {
+   "c": "gabon",
+   "p": 8,
+   "q": "8.04",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_8-04_list.pdf",
+   "up": "2026-08-25"
+  },
+  {
+   "c": "gabon",
+   "p": 8,
+   "q": "8.06",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_8-06_plan.pdf",
+   "up": "2026-08-07"
+  },
+  {
+   "c": "gabon",
+   "p": 8,
+   "q": "8.08",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_8-08_list.pdf",
+   "up": "2026-08-24"
+  },
+  {
+   "c": "gabon",
+   "p": 8,
+   "q": "8.09",
+   "round": "2023-Q2",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "gabon",
+   "p": 9,
+   "q": "9.03",
+   "round": "2023-Q2",
+   "st": "verified",
+   "file": "GAB_9-03_list.pdf",
+   "up": "2026-06-21"
+  },
+  {
+   "c": "gabon",
+   "p": 9,
+   "q": "9.04",
+   "round": "2023-Q2",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "gabon",
+   "p": 10,
+   "q": "11.02",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_11-02_list.pdf",
+   "up": "2026-06-04"
+  },
+  {
+   "c": "gabon",
+   "p": 10,
+   "q": "11.09",
+   "round": "2023-Q2",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "gabon",
+   "p": 11,
+   "q": "12.01",
+   "round": "2023-Q2",
+   "st": "pending",
+   "file": "GAB_12-01_report.pdf",
+   "up": "2026-08-15"
+  },
+  {
+   "c": "kenya",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "KEN_1a-01_report.pdf",
+   "up": "2026-06-16"
+  },
+  {
+   "c": "kenya",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "KEN_1a-03_sop.pdf",
+   "up": "2026-08-17"
+  },
+  {
+   "c": "kenya",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "kenya",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "kenya",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "KEN_1b-01_sop.pdf",
+   "up": "2026-08-05"
+  },
+  {
+   "c": "kenya",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "KEN_2-02_report.pdf",
+   "up": "2026-07-15"
+  },
+  {
+   "c": "kenya",
+   "p": 2,
+   "q": "2.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "KEN_2-03_sop.pdf",
+   "up": "2026-07-20"
+  },
+  {
+   "c": "kenya",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "kenya",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "kenya",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "KEN_3-05_report.pdf",
+   "up": "2026-06-07"
+  },
+  {
+   "c": "kenya",
+   "p": 4,
+   "q": "4.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "KEN_4-04_sop.pdf",
+   "up": "2026-08-27"
+  },
+  {
+   "c": "kenya",
+   "p": 7,
+   "q": "7.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "KEN_7-06_report.pdf",
+   "up": "2026-06-02"
+  },
+  {
+   "c": "kenya",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "kenya",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "KEN_8-08_sop.pdf",
+   "up": "2026-07-10"
+  },
+  {
+   "c": "kenya",
+   "p": 8,
+   "q": "8.09",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "kenya",
+   "p": 9,
+   "q": "9.03",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "KEN_9-03_sop.pdf",
+   "up": "2026-08-25"
+  },
+  {
+   "c": "kenya",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "KEN_11-02_plan.pdf",
+   "up": "2026-07-27"
+  },
+  {
+   "c": "kenya",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "kenya",
+   "p": 10,
+   "q": "11.20",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "kenya",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "KEN_12-01_sop.pdf",
+   "up": "2026-08-01"
+  },
+  {
+   "c": "kenya",
+   "p": 11,
+   "q": "12.07",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "KEN_12-07_list.pdf",
+   "up": "2026-07-01"
+  },
+  {
+   "c": "malawi",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MWI_1a-01_report.pdf",
+   "up": "2026-07-24"
+  },
+  {
+   "c": "malawi",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "malawi",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MWI_1a-04_list.pdf",
+   "up": "2026-08-16"
+  },
+  {
+   "c": "malawi",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MWI_1a-15_report.pdf",
+   "up": "2026-06-17"
+  },
+  {
+   "c": "malawi",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MWI_3-04_list.pdf",
+   "up": "2026-06-14"
+  },
+  {
+   "c": "malawi",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MWI_3-05_sop.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "malawi",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "malawi",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "malawi",
+   "p": 9,
+   "q": "9.03",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "malawi",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "malawi",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MWI_11-12_report.pdf",
+   "up": "2026-06-10"
+  },
+  {
+   "c": "malawi",
+   "p": 11,
+   "q": "12.07",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MWI_12-07_report.pdf",
+   "up": "2026-08-21"
+  },
+  {
+   "c": "mozambique",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "mozambique",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "mozambique",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "mozambique",
+   "p": 1,
+   "q": "1a.10",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "mozambique",
+   "p": 1,
+   "q": "1a.12",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_1a-12_report.pdf",
+   "up": "2026-06-03"
+  },
+  {
+   "c": "mozambique",
+   "p": 1,
+   "q": "1a.14",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_1a-14_plan.pdf",
+   "up": "2026-06-26"
+  },
+  {
+   "c": "mozambique",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MOZ_1b-01_sop.pdf",
+   "up": "2026-08-08"
+  },
+  {
+   "c": "mozambique",
+   "p": 1,
+   "q": "1b.06",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_1b-06_sop.pdf",
+   "up": "2026-07-10"
+  },
+  {
+   "c": "mozambique",
+   "p": 2,
+   "q": "2.03",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_2-03_sop.pdf",
+   "up": "2026-08-13"
+  },
+  {
+   "c": "mozambique",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MOZ_2-04_list.pdf",
+   "up": "2026-08-05"
+  },
+  {
+   "c": "mozambique",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "mozambique",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "mozambique",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MOZ_3-04_report.pdf",
+   "up": "2026-07-26"
+  },
+  {
+   "c": "mozambique",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_3-05_plan.pdf",
+   "up": "2026-07-05"
+  },
+  {
+   "c": "mozambique",
+   "p": 4,
+   "q": "4.03",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "mozambique",
+   "p": 5,
+   "q": "5.03",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_5-03_list.pdf",
+   "up": "2026-07-07"
+  },
+  {
+   "c": "mozambique",
+   "p": 5,
+   "q": "5.10",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_5-10_sop.pdf",
+   "up": "2026-06-26"
+  },
+  {
+   "c": "mozambique",
+   "p": 6,
+   "q": "6.04",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_6-04_sop.pdf",
+   "up": "2026-06-20"
+  },
+  {
+   "c": "mozambique",
+   "p": 6,
+   "q": "6.06",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_6-06_sop.pdf",
+   "up": "2026-06-04"
+  },
+  {
+   "c": "mozambique",
+   "p": 7,
+   "q": "7.01",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MOZ_7-01_plan.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "mozambique",
+   "p": 7,
+   "q": "7.04",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MOZ_7-04_sop.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "mozambique",
+   "p": 7,
+   "q": "7.06",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_7-06_sop.pdf",
+   "up": "2026-06-18"
+  },
+  {
+   "c": "mozambique",
+   "p": 8,
+   "q": "8.01",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MOZ_8-01_list.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "mozambique",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_8-02_plan.pdf",
+   "up": "2026-08-03"
+  },
+  {
+   "c": "mozambique",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MOZ_8-06_list.pdf",
+   "up": "2026-08-13"
+  },
+  {
+   "c": "mozambique",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q1",
+   "st": "verified",
+   "file": "MOZ_8-08_sop.pdf",
+   "up": "2026-07-26"
+  },
+  {
+   "c": "mozambique",
+   "p": 8,
+   "q": "8.09",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "mozambique",
+   "p": 8,
+   "q": "8.15",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_8-15_sop.pdf",
+   "up": "2026-08-15"
+  },
+  {
+   "c": "mozambique",
+   "p": 9,
+   "q": "9.03",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "mozambique",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_9-04_plan.pdf",
+   "up": "2026-08-21"
+  },
+  {
+   "c": "mozambique",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q1",
+   "st": "pending",
+   "file": "MOZ_11-02_sop.pdf",
+   "up": "2026-08-22"
+  },
+  {
+   "c": "mozambique",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q1",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q4",
+   "st": "pending",
+   "file": "RWA_1a-01_list.pdf",
+   "up": "2026-08-02"
+  },
+  {
+   "c": "rwanda",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_1a-03_list.pdf",
+   "up": "2026-08-22"
+  },
+  {
+   "c": "rwanda",
+   "p": 1,
+   "q": "1a.10",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_1a-10_report.pdf",
+   "up": "2026-07-26"
+  },
+  {
+   "c": "rwanda",
+   "p": 1,
+   "q": "1a.12",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_1a-12_sop.pdf",
+   "up": "2026-06-12"
+  },
+  {
+   "c": "rwanda",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q4",
+   "st": "pending",
+   "file": "RWA_1a-15_plan.pdf",
+   "up": "2026-07-17"
+  },
+  {
+   "c": "rwanda",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 1,
+   "q": "1b.05",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 1,
+   "q": "1b.06",
+   "round": "2025-Q4",
+   "st": "pending",
+   "file": "RWA_1b-06_list.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "rwanda",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q4",
+   "st": "pending",
+   "file": "RWA_2-04_plan.pdf",
+   "up": "2026-07-13"
+  },
+  {
+   "c": "rwanda",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q4",
+   "st": "pending",
+   "file": "RWA_3-01_report.pdf",
+   "up": "2026-08-19"
+  },
+  {
+   "c": "rwanda",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_3-04_plan.pdf",
+   "up": "2026-06-22"
+  },
+  {
+   "c": "rwanda",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_3-05_plan.pdf",
+   "up": "2026-08-19"
+  },
+  {
+   "c": "rwanda",
+   "p": 3,
+   "q": "3.08",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 4,
+   "q": "4.03",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 4,
+   "q": "4.04",
+   "round": "2025-Q4",
+   "st": "pending",
+   "file": "RWA_4-04_report.pdf",
+   "up": "2026-06-12"
+  },
+  {
+   "c": "rwanda",
+   "p": 4,
+   "q": "4.06",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_4-06_plan.pdf",
+   "up": "2026-06-27"
+  },
+  {
+   "c": "rwanda",
+   "p": 5,
+   "q": "5.03",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_5-03_report.pdf",
+   "up": "2026-07-20"
+  },
+  {
+   "c": "rwanda",
+   "p": 6,
+   "q": "6.04",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 6,
+   "q": "6.05",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_6-05_list.pdf",
+   "up": "2026-07-01"
+  },
+  {
+   "c": "rwanda",
+   "p": 7,
+   "q": "7.01",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_7-01_report.pdf",
+   "up": "2026-07-21"
+  },
+  {
+   "c": "rwanda",
+   "p": 7,
+   "q": "7.04",
+   "round": "2025-Q4",
+   "st": "pending",
+   "file": "RWA_7-04_report.pdf",
+   "up": "2026-06-22"
+  },
+  {
+   "c": "rwanda",
+   "p": 8,
+   "q": "8.01",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_8-01_plan.pdf",
+   "up": "2026-07-13"
+  },
+  {
+   "c": "rwanda",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 8,
+   "q": "8.04",
+   "round": "2025-Q4",
+   "st": "pending",
+   "file": "RWA_8-04_sop.pdf",
+   "up": "2026-07-23"
+  },
+  {
+   "c": "rwanda",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q4",
+   "st": "pending",
+   "file": "RWA_8-06_list.pdf",
+   "up": "2026-08-06"
+  },
+  {
+   "c": "rwanda",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_8-08_list.pdf",
+   "up": "2026-08-20"
+  },
+  {
+   "c": "rwanda",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 9,
+   "q": "9.06",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_11-02_report.pdf",
+   "up": "2026-08-02"
+  },
+  {
+   "c": "rwanda",
+   "p": 10,
+   "q": "11.05",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 10,
+   "q": "11.09",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_11-09_sop.pdf",
+   "up": "2026-07-25"
+  },
+  {
+   "c": "rwanda",
+   "p": 10,
+   "q": "11.10",
+   "round": "2025-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "rwanda",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_11-12_report.pdf",
+   "up": "2026-08-19"
+  },
+  {
+   "c": "rwanda",
+   "p": 10,
+   "q": "11.20",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_11-20_sop.pdf",
+   "up": "2026-07-06"
+  },
+  {
+   "c": "rwanda",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q4",
+   "st": "verified",
+   "file": "RWA_12-01_list.pdf",
+   "up": "2026-07-13"
+  },
+  {
+   "c": "seychelles",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_1a-01_plan.pdf",
+   "up": "2026-08-11"
+  },
+  {
+   "c": "seychelles",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 1,
+   "q": "1a.10",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 1,
+   "q": "1a.12",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_1a-12_report.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "seychelles",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_1a-15_sop.pdf",
+   "up": "2026-06-09"
+  },
+  {
+   "c": "seychelles",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 1,
+   "q": "1b.04",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_1b-04_list.pdf",
+   "up": "2026-07-15"
+  },
+  {
+   "c": "seychelles",
+   "p": 1,
+   "q": "1b.05",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_1b-05_list.pdf",
+   "up": "2026-08-12"
+  },
+  {
+   "c": "seychelles",
+   "p": 1,
+   "q": "1b.06",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 2,
+   "q": "2.02",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 2,
+   "q": "2.04",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_2-04_sop.pdf",
+   "up": "2026-07-26"
+  },
+  {
+   "c": "seychelles",
+   "p": 2,
+   "q": "2.06",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_2-06_report.pdf",
+   "up": "2026-07-10"
+  },
+  {
+   "c": "seychelles",
+   "p": 3,
+   "q": "3.01",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 3,
+   "q": "3.04",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_3-04_list.pdf",
+   "up": "2026-08-13"
+  },
+  {
+   "c": "seychelles",
+   "p": 3,
+   "q": "3.05",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_3-05_sop.pdf",
+   "up": "2026-08-04"
+  },
+  {
+   "c": "seychelles",
+   "p": 3,
+   "q": "3.07",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_3-07_list.pdf",
+   "up": "2026-08-24"
+  },
+  {
+   "c": "seychelles",
+   "p": 3,
+   "q": "3.08",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 4,
+   "q": "4.02",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_4-02_report.pdf",
+   "up": "2026-06-27"
+  },
+  {
+   "c": "seychelles",
+   "p": 4,
+   "q": "4.03",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 4,
+   "q": "4.04",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 4,
+   "q": "4.06",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 4,
+   "q": "4.09",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 4,
+   "q": "4.10",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_4-10_plan.pdf",
+   "up": "2026-06-02"
+  },
+  {
+   "c": "seychelles",
+   "p": 4,
+   "q": "4.12",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_4-12_plan.pdf",
+   "up": "2026-06-02"
+  },
+  {
+   "c": "seychelles",
+   "p": 5,
+   "q": "5.03",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_5-03_list.pdf",
+   "up": "2026-08-23"
+  },
+  {
+   "c": "seychelles",
+   "p": 5,
+   "q": "5.07",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_5-07_list.pdf",
+   "up": "2026-07-09"
+  },
+  {
+   "c": "seychelles",
+   "p": 6,
+   "q": "6.04",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_6-04_plan.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "seychelles",
+   "p": 6,
+   "q": "6.05",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_6-05_sop.pdf",
+   "up": "2026-08-08"
+  },
+  {
+   "c": "seychelles",
+   "p": 6,
+   "q": "6.06",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_6-06_sop.pdf",
+   "up": "2026-06-15"
+  },
+  {
+   "c": "seychelles",
+   "p": 6,
+   "q": "6.07",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_6-07_list.pdf",
+   "up": "2026-06-21"
+  },
+  {
+   "c": "seychelles",
+   "p": 7,
+   "q": "7.01",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 7,
+   "q": "7.04",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_7-04_list.pdf",
+   "up": "2026-08-17"
+  },
+  {
+   "c": "seychelles",
+   "p": 7,
+   "q": "7.06",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 8,
+   "q": "8.01",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_8-01_plan.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "seychelles",
+   "p": 8,
+   "q": "8.02",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_8-02_list.pdf",
+   "up": "2026-06-20"
+  },
+  {
+   "c": "seychelles",
+   "p": 8,
+   "q": "8.06",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_8-06_report.pdf",
+   "up": "2026-07-14"
+  },
+  {
+   "c": "seychelles",
+   "p": 8,
+   "q": "8.08",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_8-08_plan.pdf",
+   "up": "2026-06-04"
+  },
+  {
+   "c": "seychelles",
+   "p": 8,
+   "q": "8.09",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_8-09_report.pdf",
+   "up": "2026-06-04"
+  },
+  {
+   "c": "seychelles",
+   "p": 8,
+   "q": "8.15",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_8-15_plan.pdf",
+   "up": "2026-08-06"
+  },
+  {
+   "c": "seychelles",
+   "p": 9,
+   "q": "9.03",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_9-03_sop.pdf",
+   "up": "2026-08-06"
+  },
+  {
+   "c": "seychelles",
+   "p": 9,
+   "q": "9.04",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 9,
+   "q": "9.06",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_9-06_plan.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "seychelles",
+   "p": 9,
+   "q": "9.07",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 10,
+   "q": "11.02",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_11-02_plan.pdf",
+   "up": "2026-06-08"
+  },
+  {
+   "c": "seychelles",
+   "p": 10,
+   "q": "11.10",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_11-10_report.pdf",
+   "up": "2026-08-12"
+  },
+  {
+   "c": "seychelles",
+   "p": 10,
+   "q": "11.12",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_11-12_sop.pdf",
+   "up": "2026-08-02"
+  },
+  {
+   "c": "seychelles",
+   "p": 10,
+   "q": "11.19",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_11-19_list.pdf",
+   "up": "2026-07-03"
+  },
+  {
+   "c": "seychelles",
+   "p": 10,
+   "q": "11.20",
+   "round": "2024-Q4",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "seychelles",
+   "p": 11,
+   "q": "12.01",
+   "round": "2024-Q4",
+   "st": "pending",
+   "file": "SYC_12-01_list.pdf",
+   "up": "2026-06-19"
+  },
+  {
+   "c": "seychelles",
+   "p": 11,
+   "q": "12.07",
+   "round": "2024-Q4",
+   "st": "verified",
+   "file": "SYC_12-07_plan.pdf",
+   "up": "2026-08-01"
+  },
+  {
+   "c": "southsudan",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "SSD_1a-03_list.pdf",
+   "up": "2026-08-27"
+  },
+  {
+   "c": "southsudan",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "southsudan",
+   "p": 1,
+   "q": "1a.14",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "SSD_1a-14_list.pdf",
+   "up": "2026-08-06"
+  },
+  {
+   "c": "southsudan",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "SSD_1a-15_plan.pdf",
+   "up": "2026-06-13"
+  },
+  {
+   "c": "southsudan",
+   "p": 1,
+   "q": "1b.05",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "SSD_1b-05_sop.pdf",
+   "up": "2026-06-19"
+  },
+  {
+   "c": "southsudan",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "SSD_2-02_report.pdf",
+   "up": "2026-06-06"
+  },
+  {
+   "c": "southsudan",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "southsudan",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "southsudan",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "SSD_3-01_sop.pdf",
+   "up": "2026-06-22"
+  },
+  {
+   "c": "southsudan",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "SSD_3-04_plan.pdf",
+   "up": "2026-06-23"
+  },
+  {
+   "c": "southsudan",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "SSD_3-05_list.pdf",
+   "up": "2026-07-24"
+  },
+  {
+   "c": "southsudan",
+   "p": 6,
+   "q": "6.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "SSD_6-04_report.pdf",
+   "up": "2026-06-26"
+  },
+  {
+   "c": "southsudan",
+   "p": 6,
+   "q": "6.05",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "southsudan",
+   "p": 7,
+   "q": "7.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "SSD_7-01_plan.pdf",
+   "up": "2026-08-04"
+  },
+  {
+   "c": "southsudan",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "SSD_8-02_list.pdf",
+   "up": "2026-08-13"
+  },
+  {
+   "c": "southsudan",
+   "p": 8,
+   "q": "8.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "southsudan",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "SSD_8-06_sop.pdf",
+   "up": "2026-06-24"
+  },
+  {
+   "c": "southsudan",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "SSD_8-08_list.pdf",
+   "up": "2026-07-26"
+  },
+  {
+   "c": "southsudan",
+   "p": 8,
+   "q": "8.15",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "southsudan",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "southsudan",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "SSD_11-02_sop.pdf",
+   "up": "2026-07-12"
+  },
+  {
+   "c": "southsudan",
+   "p": 10,
+   "q": "11.05",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "southsudan",
+   "p": 10,
+   "q": "11.09",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "SSD_11-09_list.pdf",
+   "up": "2026-07-23"
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_1a-01_sop.pdf",
+   "up": "2026-08-05"
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_1a-03_list.pdf",
+   "up": "2026-08-05"
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_1a-04_report.pdf",
+   "up": "2026-07-16"
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1a.10",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_1a-10_sop.pdf",
+   "up": "2026-07-23"
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1a.14",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_1a-15_sop.pdf",
+   "up": "2026-07-25"
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1b.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_1b-04_sop.pdf",
+   "up": "2026-08-27"
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1b.05",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 1,
+   "q": "1b.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_1b-06_plan.pdf",
+   "up": "2026-07-18"
+  },
+  {
+   "c": "tanzania",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_2-04_list.pdf",
+   "up": "2026-08-25"
+  },
+  {
+   "c": "tanzania",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_2-06_plan.pdf",
+   "up": "2026-08-06"
+  },
+  {
+   "c": "tanzania",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_3-01_plan.pdf",
+   "up": "2026-08-21"
+  },
+  {
+   "c": "tanzania",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_3-05_list.pdf",
+   "up": "2026-06-03"
+  },
+  {
+   "c": "tanzania",
+   "p": 4,
+   "q": "4.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_4-02_report.pdf",
+   "up": "2026-07-01"
+  },
+  {
+   "c": "tanzania",
+   "p": 4,
+   "q": "4.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_4-04_plan.pdf",
+   "up": "2026-08-06"
+  },
+  {
+   "c": "tanzania",
+   "p": 4,
+   "q": "4.06",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 4,
+   "q": "4.12",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 5,
+   "q": "5.03",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_5-03_list.pdf",
+   "up": "2026-06-18"
+  },
+  {
+   "c": "tanzania",
+   "p": 5,
+   "q": "5.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_5-04_sop.pdf",
+   "up": "2026-08-10"
+  },
+  {
+   "c": "tanzania",
+   "p": 5,
+   "q": "5.10",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 6,
+   "q": "6.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_6-04_sop.pdf",
+   "up": "2026-06-10"
+  },
+  {
+   "c": "tanzania",
+   "p": 6,
+   "q": "6.06",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 7,
+   "q": "7.01",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 7,
+   "q": "7.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_7-04_sop.pdf",
+   "up": "2026-06-27"
+  },
+  {
+   "c": "tanzania",
+   "p": 7,
+   "q": "7.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_7-06_report.pdf",
+   "up": "2026-07-27"
+  },
+  {
+   "c": "tanzania",
+   "p": 8,
+   "q": "8.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_8-01_sop.pdf",
+   "up": "2026-08-22"
+  },
+  {
+   "c": "tanzania",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 8,
+   "q": "8.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_8-08_list.pdf",
+   "up": "2026-08-20"
+  },
+  {
+   "c": "tanzania",
+   "p": 8,
+   "q": "8.09",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 8,
+   "q": "8.15",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_8-15_plan.pdf",
+   "up": "2026-08-12"
+  },
+  {
+   "c": "tanzania",
+   "p": 9,
+   "q": "9.03",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "tanzania",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_9-04_plan.pdf",
+   "up": "2026-08-01"
+  },
+  {
+   "c": "tanzania",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_11-02_plan.pdf",
+   "up": "2026-07-09"
+  },
+  {
+   "c": "tanzania",
+   "p": 10,
+   "q": "11.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_11-05_list.pdf",
+   "up": "2026-08-22"
+  },
+  {
+   "c": "tanzania",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_11-12_list.pdf",
+   "up": "2026-07-10"
+  },
+  {
+   "c": "tanzania",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "TZA_12-01_sop.pdf",
+   "up": "2026-07-13"
+  },
+  {
+   "c": "tanzania",
+   "p": 11,
+   "q": "12.07",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "TZA_12-07_plan.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "uganda",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_1a-01_report.pdf",
+   "up": "2026-07-27"
+  },
+  {
+   "c": "uganda",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_1b-01_sop.pdf",
+   "up": "2026-06-09"
+  },
+  {
+   "c": "uganda",
+   "p": 1,
+   "q": "1b.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_1b-06_plan.pdf",
+   "up": "2026-07-16"
+  },
+  {
+   "c": "uganda",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_2-02_sop.pdf",
+   "up": "2026-07-24"
+  },
+  {
+   "c": "uganda",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_2-04_plan.pdf",
+   "up": "2026-07-26"
+  },
+  {
+   "c": "uganda",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_2-06_sop.pdf",
+   "up": "2026-08-22"
+  },
+  {
+   "c": "uganda",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_3-04_plan.pdf",
+   "up": "2026-06-23"
+  },
+  {
+   "c": "uganda",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_3-05_sop.pdf",
+   "up": "2026-07-13"
+  },
+  {
+   "c": "uganda",
+   "p": 3,
+   "q": "3.07",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_3-07_list.pdf",
+   "up": "2026-08-02"
+  },
+  {
+   "c": "uganda",
+   "p": 4,
+   "q": "4.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_4-02_plan.pdf",
+   "up": "2026-07-19"
+  },
+  {
+   "c": "uganda",
+   "p": 4,
+   "q": "4.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_4-04_report.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "uganda",
+   "p": 4,
+   "q": "4.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_4-06_plan.pdf",
+   "up": "2026-07-21"
+  },
+  {
+   "c": "uganda",
+   "p": 4,
+   "q": "4.10",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_4-10_list.pdf",
+   "up": "2026-08-21"
+  },
+  {
+   "c": "uganda",
+   "p": 4,
+   "q": "4.12",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 5,
+   "q": "5.03",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_5-03_report.pdf",
+   "up": "2026-06-27"
+  },
+  {
+   "c": "uganda",
+   "p": 5,
+   "q": "5.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_5-04_plan.pdf",
+   "up": "2026-07-22"
+  },
+  {
+   "c": "uganda",
+   "p": 5,
+   "q": "5.07",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_5-07_sop.pdf",
+   "up": "2026-07-07"
+  },
+  {
+   "c": "uganda",
+   "p": 5,
+   "q": "5.10",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_5-10_plan.pdf",
+   "up": "2026-07-06"
+  },
+  {
+   "c": "uganda",
+   "p": 6,
+   "q": "6.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_6-04_list.pdf",
+   "up": "2026-08-11"
+  },
+  {
+   "c": "uganda",
+   "p": 6,
+   "q": "6.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_6-05_list.pdf",
+   "up": "2026-07-22"
+  },
+  {
+   "c": "uganda",
+   "p": 6,
+   "q": "6.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_6-06_sop.pdf",
+   "up": "2026-08-27"
+  },
+  {
+   "c": "uganda",
+   "p": 6,
+   "q": "6.07",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_6-07_list.pdf",
+   "up": "2026-08-03"
+  },
+  {
+   "c": "uganda",
+   "p": 7,
+   "q": "7.01",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_7-01_sop.pdf",
+   "up": "2026-07-12"
+  },
+  {
+   "c": "uganda",
+   "p": 7,
+   "q": "7.06",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 8,
+   "q": "8.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_8-01_sop.pdf",
+   "up": "2026-06-20"
+  },
+  {
+   "c": "uganda",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 8,
+   "q": "8.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_8-04_list.pdf",
+   "up": "2026-07-01"
+  },
+  {
+   "c": "uganda",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_8-06_report.pdf",
+   "up": "2026-08-07"
+  },
+  {
+   "c": "uganda",
+   "p": 8,
+   "q": "8.08",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_8-08_report.pdf",
+   "up": "2026-08-08"
+  },
+  {
+   "c": "uganda",
+   "p": 8,
+   "q": "8.09",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_8-09_report.pdf",
+   "up": "2026-08-21"
+  },
+  {
+   "c": "uganda",
+   "p": 8,
+   "q": "8.15",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_8-15_list.pdf",
+   "up": "2026-07-17"
+  },
+  {
+   "c": "uganda",
+   "p": 9,
+   "q": "9.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_9-03_list.pdf",
+   "up": "2026-07-19"
+  },
+  {
+   "c": "uganda",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_9-04_sop.pdf",
+   "up": "2026-06-20"
+  },
+  {
+   "c": "uganda",
+   "p": 9,
+   "q": "9.06",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 10,
+   "q": "11.02",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 10,
+   "q": "11.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_11-05_sop.pdf",
+   "up": "2026-07-09"
+  },
+  {
+   "c": "uganda",
+   "p": 10,
+   "q": "11.10",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_11-10_report.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "uganda",
+   "p": 10,
+   "q": "11.12",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "uganda",
+   "p": 10,
+   "q": "11.19",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_11-19_sop.pdf",
+   "up": "2026-08-27"
+  },
+  {
+   "c": "uganda",
+   "p": 10,
+   "q": "11.20",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "UGA_11-20_plan.pdf",
+   "up": "2026-06-22"
+  },
+  {
+   "c": "uganda",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "UGA_12-01_report.pdf",
+   "up": "2026-06-05"
+  },
+  {
+   "c": "uganda",
+   "p": 11,
+   "q": "12.07",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zambia",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zambia",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZMB_1a-03_plan.pdf",
+   "up": "2026-08-11"
+  },
+  {
+   "c": "zambia",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zambia",
+   "p": 1,
+   "q": "1a.11",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZMB_1a-11_plan.pdf",
+   "up": "2026-08-01"
+  },
+  {
+   "c": "zambia",
+   "p": 1,
+   "q": "1a.12",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZMB_1a-12_report.pdf",
+   "up": "2026-06-23"
+  },
+  {
+   "c": "zambia",
+   "p": 1,
+   "q": "1a.14",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZMB_1a-14_list.pdf",
+   "up": "2026-07-23"
+  },
+  {
+   "c": "zambia",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZMB_1a-15_report.pdf",
+   "up": "2026-06-16"
+  },
+  {
+   "c": "zambia",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZMB_1b-01_plan.pdf",
+   "up": "2026-08-23"
+  },
+  {
+   "c": "zambia",
+   "p": 1,
+   "q": "1b.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZMB_1b-04_plan.pdf",
+   "up": "2026-08-17"
+  },
+  {
+   "c": "zambia",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZMB_2-02_list.pdf",
+   "up": "2026-08-15"
+  },
+  {
+   "c": "zambia",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZMB_2-04_report.pdf",
+   "up": "2026-07-03"
+  },
+  {
+   "c": "zambia",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZMB_3-01_list.pdf",
+   "up": "2026-07-05"
+  },
+  {
+   "c": "zambia",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZMB_3-04_sop.pdf",
+   "up": "2026-06-08"
+  },
+  {
+   "c": "zambia",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZMB_3-05_plan.pdf",
+   "up": "2026-06-27"
+  },
+  {
+   "c": "zambia",
+   "p": 5,
+   "q": "5.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zambia",
+   "p": 6,
+   "q": "6.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZMB_6-05_sop.pdf",
+   "up": "2026-06-05"
+  },
+  {
+   "c": "zambia",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZMB_8-02_sop.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "zambia",
+   "p": 8,
+   "q": "8.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZMB_8-06_report.pdf",
+   "up": "2026-07-15"
+  },
+  {
+   "c": "zambia",
+   "p": 9,
+   "q": "9.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZMB_9-03_sop.pdf",
+   "up": "2026-07-15"
+  },
+  {
+   "c": "zanzibar",
+   "p": 1,
+   "q": "1a.01",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zanzibar",
+   "p": 1,
+   "q": "1a.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_1a-03_sop.pdf",
+   "up": "2026-06-12"
+  },
+  {
+   "c": "zanzibar",
+   "p": 1,
+   "q": "1a.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZNZ_1a-04_plan.pdf",
+   "up": "2026-07-08"
+  },
+  {
+   "c": "zanzibar",
+   "p": 1,
+   "q": "1a.10",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_1a-10_sop.pdf",
+   "up": "2026-07-26"
+  },
+  {
+   "c": "zanzibar",
+   "p": 1,
+   "q": "1a.14",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zanzibar",
+   "p": 1,
+   "q": "1a.15",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_1a-15_list.pdf",
+   "up": "2026-08-08"
+  },
+  {
+   "c": "zanzibar",
+   "p": 1,
+   "q": "1b.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_1b-01_report.pdf",
+   "up": "2026-07-25"
+  },
+  {
+   "c": "zanzibar",
+   "p": 1,
+   "q": "1b.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zanzibar",
+   "p": 1,
+   "q": "1b.06",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZNZ_1b-06_sop.pdf",
+   "up": "2026-06-27"
+  },
+  {
+   "c": "zanzibar",
+   "p": 2,
+   "q": "2.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_2-02_sop.pdf",
+   "up": "2026-07-01"
+  },
+  {
+   "c": "zanzibar",
+   "p": 2,
+   "q": "2.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_2-04_plan.pdf",
+   "up": "2026-06-26"
+  },
+  {
+   "c": "zanzibar",
+   "p": 2,
+   "q": "2.06",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zanzibar",
+   "p": 3,
+   "q": "3.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_3-01_report.pdf",
+   "up": "2026-08-03"
+  },
+  {
+   "c": "zanzibar",
+   "p": 3,
+   "q": "3.04",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZNZ_3-04_list.pdf",
+   "up": "2026-08-23"
+  },
+  {
+   "c": "zanzibar",
+   "p": 3,
+   "q": "3.05",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_3-05_list.pdf",
+   "up": "2026-06-16"
+  },
+  {
+   "c": "zanzibar",
+   "p": 3,
+   "q": "3.07",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZNZ_3-07_plan.pdf",
+   "up": "2026-07-04"
+  },
+  {
+   "c": "zanzibar",
+   "p": 3,
+   "q": "3.08",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_3-08_list.pdf",
+   "up": "2026-08-02"
+  },
+  {
+   "c": "zanzibar",
+   "p": 4,
+   "q": "4.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_4-03_report.pdf",
+   "up": "2026-07-18"
+  },
+  {
+   "c": "zanzibar",
+   "p": 4,
+   "q": "4.12",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZNZ_4-12_list.pdf",
+   "up": "2026-08-25"
+  },
+  {
+   "c": "zanzibar",
+   "p": 5,
+   "q": "5.03",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_5-03_report.pdf",
+   "up": "2026-07-13"
+  },
+  {
+   "c": "zanzibar",
+   "p": 5,
+   "q": "5.10",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zanzibar",
+   "p": 6,
+   "q": "6.05",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZNZ_6-05_sop.pdf",
+   "up": "2026-08-18"
+  },
+  {
+   "c": "zanzibar",
+   "p": 6,
+   "q": "6.07",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZNZ_6-07_report.pdf",
+   "up": "2026-08-13"
+  },
+  {
+   "c": "zanzibar",
+   "p": 7,
+   "q": "7.01",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_7-01_list.pdf",
+   "up": "2026-08-26"
+  },
+  {
+   "c": "zanzibar",
+   "p": 7,
+   "q": "7.04",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zanzibar",
+   "p": 7,
+   "q": "7.06",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_7-06_list.pdf",
+   "up": "2026-07-18"
+  },
+  {
+   "c": "zanzibar",
+   "p": 8,
+   "q": "8.01",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zanzibar",
+   "p": 8,
+   "q": "8.02",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_8-02_report.pdf",
+   "up": "2026-06-10"
+  },
+  {
+   "c": "zanzibar",
+   "p": 8,
+   "q": "8.09",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_8-09_list.pdf",
+   "up": "2026-06-03"
+  },
+  {
+   "c": "zanzibar",
+   "p": 9,
+   "q": "9.03",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZNZ_9-03_plan.pdf",
+   "up": "2026-08-20"
+  },
+  {
+   "c": "zanzibar",
+   "p": 9,
+   "q": "9.04",
+   "round": "2025-Q3",
+   "st": "verified",
+   "file": "ZNZ_9-04_plan.pdf",
+   "up": "2026-08-07"
+  },
+  {
+   "c": "zanzibar",
+   "p": 11,
+   "q": "12.01",
+   "round": "2025-Q3",
+   "st": "missing",
+   "file": null,
+   "up": null
+  },
+  {
+   "c": "zanzibar",
+   "p": 11,
+   "q": "12.07",
+   "round": "2025-Q3",
+   "st": "pending",
+   "file": "ZNZ_12-07_list.pdf",
+   "up": "2026-07-13"
+  }
+ ]
+}

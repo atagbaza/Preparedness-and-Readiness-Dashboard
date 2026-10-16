@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="ds/styles.css">
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+<script src="data/pdx-data.js"></script>
+<script src="data/world-topo.js"></script>
+<script src="africa-map.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+<script src="pptx-summary.js"></script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#2c455d"/><text x="50" y="62" text-anchor="middle" font-family="Arial" font-weight="700" font-size="30" fill="#f2f2f3">RIP</text></svg></template>
+<style>
+body{margin:0;background:#f2f2f3}
+a{color:#416180}a:hover{color:#2c455d}
+select,button,input{font:inherit}
+.btn{white-space:nowrap;flex-shrink:0}
+@media print{[data-noprint]{display:none !important}body{background:#fff}}
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:var(--color-bg); color:var(--color-text); font-family:var(--font-body);">
+
+  <header data-noprint="1" style="background:var(--color-accent-900); color:#f2f2f3;">
+    <div style="max-width:1440px; margin:0 auto; padding:14px 24px; display:flex; flex-wrap:wrap; align-items:center; gap:14px 24px;">
+      <div style="display:flex; flex-direction:column; margin-right:auto;">
+        <span style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--color-accent-300);">PDX · WHO African Region</span>
+        <span style="font-family:var(--font-heading); font-weight:600; font-size:24px; line-height:1.1;">Preparedness and Readiness Dashboard</span>
+      </div>
+      <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-300); margin-right:4px;">Hazard</span>
+        <sc-for list="{{ hazards }}" as="hz" hint-placeholder-count="2">
+          <button onClick="{{ hz.onClick }}" style="padding:5px 12px; font-size:13px; font-weight:500; border:1px solid {{ hz.border }}; background:{{ hz.bg }}; color:{{ hz.ink }}; cursor:pointer;">{{ hz.name }}</button>
+        </sc-for>
+        <span title="Planned" style="padding:5px 12px; font-size:13px; border:1px solid var(--color-accent-800); color:var(--color-accent-400);">Mpox</span>
+        <span title="Planned" style="padding:5px 12px; font-size:13px; border:1px solid var(--color-accent-800); color:var(--color-accent-400);">Floods</span>
+      </div>
+      <label style="display:flex; flex-direction:column; gap:3px;">
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-300);">Assessment round</span>
+        <select value="{{ round }}" onChange="{{ onRound }}" style="background:var(--color-accent-800); color:#f2f2f3; border:1px solid var(--color-accent-700); padding:6px 8px; min-width:210px;">
+          <sc-for list="{{ roundOpts }}" as="ro" hint-placeholder-count="0"><option value="{{ ro.value }}">{{ ro.label }}</option></sc-for>
+        </select>
+      </label>
+      <label style="display:flex; flex-direction:column; gap:3px;">
+        <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-300);">Signed in as</span>
+        <select value="{{ roleKey }}" onChange="{{ onRole }}" style="background:var(--color-accent-800); color:#f2f2f3; border:1px solid var(--color-accent-700); padding:6px 8px; min-width:230px;">
+          <option value="region">WHO AFRO · Regional team</option>
+          <sc-for list="{{ roleCountryOpts }}" as="o" hint-placeholder-count="0">
+            <option value="{{ o.value }}">{{ o.label }}</option>
+          </sc-for>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <nav data-noprint="1" style="background:var(--color-bg); border-bottom:1px solid var(--color-divider); position:sticky; top:0; z-index:5;">
+    <div style="max-width:1440px; margin:0 auto; padding:0 24px; display:flex; gap:4px; overflow-x:auto;">
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="7">
+        <button onClick="{{ t.onClick }}" style="background:none; border:0; border-bottom:2px solid {{ t.border }}; color:{{ t.color }}; padding:14px 12px 12px; font-family:var(--font-heading); font-weight:600; font-size:16px; white-space:nowrap; cursor:pointer;" style-hover="color:var(--color-accent-700)">{{ t.label }}</button>
+      </sc-for>
+    </div>
+  </nav>
+
+  <div style="position:sticky; top:49px; z-index:4; background:var(--color-bg);">
+    <div style="max-width:1440px; margin:0 auto; padding:10px 24px 0;">
+      <div style="display:flex; flex-wrap:wrap; gap:6px 16px; align-items:center; padding:8px 14px; border:1px solid var(--color-accent-300); color:var(--color-accent-800); background:var(--color-accent-100);">
+        <strong style="font-weight:600; letter-spacing:0.1em; text-transform:uppercase; font-size:11px;">{{ srcTag }}</strong>
+        <span style="font-size:13px; margin-right:auto;">{{ srcText }}</span>
+        <span style="font-size:12px; color:var(--color-accent-700);">{{ srcNote }}</span>
+      </div>
+    </div>
+  </div>
+
+  <main style="max-width:1440px; margin:0 auto; padding:24px 24px 64px; display:flex; flex-direction:column; gap:24px;">
+
+    <sc-if value="{{ isOverview }}" hint-placeholder-val="{{ true }}">
+      <section data-screen-label="Overview" style="display:flex; flex-direction:column; gap:24px;">
+        <div style="display:flex; flex-wrap:wrap; align-items:flex-end; gap:12px 24px;">
+          <div style="margin-right:auto;">
+            <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">{{ roundLabel }} · {{ reportedTxt }}</div>
+            <h1 style="margin:4px 0 0; font-size:40px;">{{ overviewTitle }}</h1>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px;">
+          <div class="blueprint" style="padding:16px 18px; display:flex; flex-direction:column; gap:6px;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">{{ k1.label }}</span>
+            <div style="display:flex; align-items:baseline; gap:10px;">
+              <span style="font-family:var(--font-heading); font-weight:600; font-size:44px; line-height:1;">{{ k1.value }}</span>
+              <span style="font-size:13px; font-weight:500; color:{{ k1.deltaColor }};">{{ k1.delta }}</span>
+            </div>
+            <span style="align-self:flex-start; font-size:11px; padding:2px 8px; background:{{ k1.tint }}; color:{{ k1.ink }};">{{ k1.band }}</span>
+          </div>
+          <div class="blueprint" style="padding:16px 18px; display:flex; flex-direction:column; gap:8px;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">{{ k2.label }}</span>
+            <div style="display:flex; height:14px; gap:2px;">
+              <sc-for list="{{ k2.segs }}" as="sg" hint-placeholder-count="3">
+                <div title="{{ sg.label }}" style="flex:{{ sg.n }} 1 0; background:{{ sg.fill }};"></div>
+              </sc-for>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:4px 14px; font-size:13px;">
+              <sc-for list="{{ k2.segs }}" as="sg" hint-placeholder-count="3">
+                <span style="display:flex; align-items:center; gap:6px;"><i style="width:9px; height:9px; background:{{ sg.fill }}; display:inline-block;"></i><strong style="font-weight:600;">{{ sg.n }}</strong> {{ sg.label }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div class="blueprint" style="padding:16px 18px; display:flex; flex-direction:column; gap:6px;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">{{ k3.label }}</span>
+            <span style="font-family:var(--font-heading); font-weight:600; font-size:26px; line-height:1.1;">{{ k3.value }}</span>
+            <span style="font-size:13px; color:var(--color-neutral-700);">{{ k3.sub }}</span>
+          </div>
+          <div class="blueprint" style="padding:16px 18px; display:flex; flex-direction:column; gap:6px;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">{{ k4.label }}</span>
+            <div style="display:flex; align-items:baseline; gap:8px;">
+              <span style="font-family:var(--font-heading); font-weight:600; font-size:44px; line-height:1;">{{ k4.value }}</span>
+              <span style="font-size:13px; color:var(--color-neutral-700);">{{ k4.sub }}</span>
+            </div>
+            <div style="height:6px; background:var(--color-neutral-200);"><div style="height:100%; width:{{ k4.width }}; background:var(--color-accent);"></div></div>
+          </div>
+        </div>
+
+        <div class="blueprint" style="padding:0; display:flex; flex-direction:column;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px 20px; padding:14px 18px; border-bottom:1px solid var(--color-divider);">
+            <h3 style="margin:0; margin-right:auto;">Readiness map</h3>
+            <div style="display:flex; flex-wrap:wrap; gap:6px 14px; font-size:12px; color:var(--color-neutral-800);">
+              <sc-for list="{{ legend }}" as="lg" hint-placeholder-count="4">
+                <span style="display:flex; align-items:center; gap:6px;"><i style="width:10px; height:10px; display:inline-block; background:{{ lg.fill }};"></i>{{ lg.label }}</span>
+              </sc-for>
+            </div>
+            <label style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">Show</span>
+              <select class="input" value="{{ mapPillar }}" onChange="{{ onMapPillar }}" style="width:auto; min-height:34px; padding:4px 8px; font-size:13px;">
+                <option value="0">Overall readiness</option>
+                <sc-for list="{{ pillarOpts }}" as="po" hint-placeholder-count="0"><option value="{{ po.value }}">{{ po.label }}</option></sc-for>
+              </select>
+            </label>
+          </div>
+          <div style="display:flex; flex-wrap:wrap;">
+            <div style="flex:3 1 560px; min-width:0;">
+              <x-import component-from-global-scope="africa-map" values-json="{{ mapJson }}" selected="{{ mapSel }}" height="620" hint-size="100%,620px"></x-import>
+            </div>
+            <aside style="flex:1 1 300px; max-width:100%; border-left:1px solid var(--color-divider); padding:18px; display:flex; flex-direction:column; gap:12px;">
+              <sc-if value="{{ mp.has }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex; align-items:flex-start; gap:8px;">
+                  <div style="display:flex; flex-direction:column; gap:2px; margin-right:auto;">
+                    <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">Selected country</span>
+                    <h2 style="margin:0; font-size:34px; line-height:1.05;">{{ mp.name }}</h2>
+                  </div>
+                  <button class="btn btn-ghost" onClick="{{ mp.onClear }}" title="Clear selection" style="padding:4px 8px; font-size:13px;">Clear</button>
+                </div>
+                <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
+                  <span style="font-family:var(--font-heading); font-weight:600; font-size:52px; line-height:1;">{{ mp.ovTxt }}</span>
+                  <span style="font-size:11px; padding:2px 8px; background:{{ mp.tint }}; color:{{ mp.ink }};">{{ mp.band }}</span>
+                  <span style="font-size:13px; color:{{ mp.deltaColor }};">{{ mp.deltaTxt }}</span>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:3px;">
+                  <sc-for list="{{ mp.pillars }}" as="mq" hint-placeholder-count="12">
+                    <button onClick="{{ mq.onClick }}" title="{{ mq.name }}" style="display:grid; grid-template-columns:86px minmax(0,1fr) 40px; gap:8px; align-items:center; background:{{ mq.bg }}; border:0; padding:4px; cursor:pointer; text-align:left; color:var(--color-text);" style-hover="background:var(--color-neutral-200)">
+                      <span style="font-size:12px; font-weight:{{ mq.weight }};">{{ mq.short }}</span>
+                      <span style="height:8px; background:var(--color-neutral-200);"><span style="display:block; height:100%; width:{{ mq.width }}; background:{{ mq.fill }};"></span></span>
+                      <span style="font-size:12px; font-weight:600; text-align:right;">{{ mq.txt }}</span>
+                    </button>
+                  </sc-for>
+                </div>
+                <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:auto;">
+                  <button class="btn btn-primary" onClick="{{ mp.onOpen }}">Open profile</button>
+                  <button class="btn btn-secondary" onClick="{{ mp.onActions }}">Actions</button>
+                </div>
+              </sc-if>
+              <sc-if value="{{ mp.none }}" hint-placeholder-val="{{ true }}">
+                <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">{{ mp.metric }}</span>
+                <h3 style="margin:0;">Select a country</h3>
+                <span style="font-size:13px; color:var(--color-neutral-700); line-height:1.45;">Click a country on the map or in the list to see its pillar breakdown.</span>
+                <div style="display:flex; flex-direction:column; gap:2px;">
+                  <sc-for list="{{ mp.list }}" as="ml" hint-placeholder-count="10">
+                    <button onClick="{{ ml.onClick }}" style="display:grid; grid-template-columns:minmax(0,1fr) 90px 40px; gap:8px; align-items:center; background:none; border:0; padding:6px 4px; cursor:{{ ml.cursor }}; text-align:left; color:var(--color-text);" style-hover="background:var(--color-neutral-200)">
+                      <span style="font-size:13px; font-weight:500; color:{{ ml.nameInk }};">{{ ml.name }}</span>
+                      <span style="height:8px; background:var(--color-neutral-200);"><span style="display:block; height:100%; width:{{ ml.width }}; background:{{ ml.fill }};"></span></span>
+                      <span style="font-size:13px; font-weight:600; text-align:right;">{{ ml.scoreTxt }}</span>
+                    </button>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </aside>
+          </div>
+        </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap:24px; align-items:start;">
+            <div class="blueprint" style="padding:18px; grid-column:1 / -1; display:flex; flex-direction:column; gap:12px;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:10px;">
+                <h3 style="margin:0; margin-right:auto;">Country × pillar readiness matrix</h3>
+                <div style="display:flex; flex-wrap:wrap; gap:6px 14px; font-size:12px;">
+                  <sc-for list="{{ legend }}" as="lg" hint-placeholder-count="4">
+                    <span style="display:flex; align-items:center; gap:6px;"><i style="width:10px; height:10px; display:inline-block; background:{{ lg.tint }}; border:1px solid {{ lg.fill }};"></i>{{ lg.label }}</span>
+                  </sc-for>
+                </div>
+              </div>
+              <div style="overflow-x:auto;">
+                <table style="border-collapse:separate; border-spacing:2px; width:100%; min-width:980px; font-size:13px;">
+                  <thead>
+                    <tr>
+                      <th style="text-align:left; font-weight:500; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-neutral-700); padding:6px 8px;">Country</th>
+                      <sc-for list="{{ pillarHeads }}" as="ph" hint-placeholder-count="12">
+                        <th title="{{ ph.name }}" style="font-weight:500; font-size:11px; color:var(--color-neutral-700); padding:6px 2px; line-height:1.2;">{{ ph.num }}<br>{{ ph.short }}</th>
+                      </sc-for>
+                      <th style="font-weight:600; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; padding:6px 4px;">Overall</th>
+                      <th style="font-weight:500; font-size:11px; color:var(--color-neutral-700); padding:6px 4px;">{{ deltaHead }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <sc-for list="{{ matrix }}" as="mr" hint-placeholder-count="10">
+                      <tr>
+                        <td style="padding:8px; font-weight:500; white-space:nowrap; color:{{ mr.nameInk }};">{{ mr.name }}</td>
+                        <sc-for list="{{ mr.cells }}" as="mc" hint-placeholder-count="12">
+                          <td onClick="{{ mc.onClick }}" title="{{ mc.tip }}" style="background:{{ mc.bg }}; color:{{ mc.ink }}; text-align:center; padding:8px 2px; cursor:{{ mc.cursor }}; font-variant-numeric:tabular-nums;" style-hover="outline:1px solid var(--color-text)">{{ mc.txt }}</td>
+                        </sc-for>
+                        <td style="background:{{ mr.ovBg }}; color:{{ mr.ovInk }}; text-align:center; font-family:var(--font-heading); font-weight:600; font-size:16px; padding:6px 4px;">{{ mr.ovTxt }}</td>
+                        <td style="text-align:center; font-size:12px; color:{{ mr.deltaColor }};">{{ mr.deltaTxt }}</td>
+                      </tr>
+                    </sc-for>
+                    <tr>
+                      <td style="padding:8px; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-neutral-700); border-top:1px solid var(--color-divider);">Regional avg</td>
+                      <sc-for list="{{ matrixAvg }}" as="ma" hint-placeholder-count="12">
+                        <td style="text-align:center; padding:8px 2px; font-weight:600; border-top:1px solid var(--color-divider); color:{{ ma.ink }};">{{ ma.txt }}</td>
+                      </sc-for>
+                      <td style="text-align:center; font-family:var(--font-heading); font-weight:600; font-size:16px; border-top:1px solid var(--color-divider);">{{ regionAvgTxt }}</td>
+                      <td style="border-top:1px solid var(--color-divider);"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <span style="font-size:12px; color:var(--color-neutral-600);">Click any cell to open the question-level pillar analysis for that country.</span>
+            </div>
+            <div class="blueprint" style="padding:18px; display:flex; flex-direction:column; gap:10px;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <h3 style="margin:0;">Most common gaps</h3>
+              <span style="font-size:13px; color:var(--color-neutral-700);">Criteria unmet by the most countries this round</span>
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap:0 32px;">
+              <sc-for list="{{ topGaps }}" as="tg" hint-placeholder-count="6">
+                <div style="display:grid; grid-template-columns:44px minmax(0,1fr); gap:10px; padding:8px 0; border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+                  <span style="font-family:var(--font-heading); font-weight:600; font-size:22px; line-height:1; color:oklch(0.45 0.13 28);">{{ tg.n }}</span>
+                  <div style="display:flex; flex-direction:column; gap:2px;">
+                    <span style="font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-accent-700);">{{ tg.sn }} · {{ tg.pillar }}</span>
+                    <span style="font-size:13px; line-height:1.4;">{{ tg.text }}</span>
+                  </div>
+                </div>
+              </sc-for>
+              </div>
+            </div>
+          </div>
+
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ showCountryPicker }}" hint-placeholder-val="{{ false }}">
+      <div data-noprint="1" style="display:flex; flex-wrap:wrap; gap:6px; align-items:center;">
+        <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700); margin-right:6px;">Country</span>
+        <select class="input" value="{{ countryVal }}" onChange="{{ onCountry }}" style="width:auto; min-width:240px; min-height:34px; padding:4px 8px; font-size:14px;">
+          <sc-for list="{{ countryPickOpts }}" as="co" hint-placeholder-count="0"><option value="{{ co.value }}">{{ co.label }}</option></sc-for>
+        </select>
+        <span style="font-size:12px; color:var(--color-neutral-700);">{{ countryPickNote }}</span>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isCountry }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Country profile" style="display:flex; flex-direction:column; gap:24px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap:24px; align-items:start;">
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">Country profile · {{ roundLabel }}</span>
+            <h1 style="margin:0; font-size:48px;">{{ cp.name }}</h1>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:var(--color-neutral-800); text-wrap:pretty; max-width:62ch;">{{ cp.intro }}</p>
+            <div data-noprint="1" style="display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;">
+              <button class="btn btn-primary" onClick="{{ goActions }}">View anticipatory actions</button>
+              <button class="btn btn-secondary" onClick="{{ goReport }}">Country report</button>
+              <button class="btn btn-secondary" onClick="{{ goEvidence }}">Evidence</button>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:16px;">
+            <div class="blueprint" style="padding:16px; display:flex; flex-direction:column; gap:6px;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">Overall readiness</span>
+              <span style="font-family:var(--font-heading); font-weight:600; font-size:52px; line-height:1;">{{ cp.ovTxt }}</span>
+              <span style="align-self:flex-start; font-size:11px; padding:2px 8px; background:{{ cp.tint }}; color:{{ cp.ink }};">{{ cp.band }}</span>
+            </div>
+            <div class="blueprint" style="padding:16px; display:flex; flex-direction:column; gap:6px;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">{{ deltaHead }}</span>
+              <span style="font-family:var(--font-heading); font-weight:600; font-size:52px; line-height:1; color:{{ cp.deltaColor }};">{{ cp.deltaTxt }}</span>
+              <span style="font-size:12px; color:var(--color-neutral-700);">Regional average {{ regionAvgTxt }}</span>
+              <span style="font-size:12px; color:var(--color-neutral-800); line-height:1.4;">{{ cp.history }}</span>
+            </div>
+            <div class="blueprint" style="padding:16px; display:flex; flex-direction:column; gap:8px;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">Pillars by capacity</span>
+              <sc-for list="{{ cp.bandCounts }}" as="bc" hint-placeholder-count="3">
+                <span style="display:flex; align-items:center; gap:8px; font-size:14px;"><i style="width:10px; height:10px; display:inline-block; background:{{ bc.fill }};"></i><strong style="font-weight:600; min-width:18px;">{{ bc.n }}</strong>{{ bc.label }}</span>
+              </sc-for>
+            </div>
+            <div class="blueprint" style="padding:16px; display:flex; flex-direction:column; gap:6px;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">Evidence coverage</span>
+              <span style="font-family:var(--font-heading); font-weight:600; font-size:52px; line-height:1;">{{ cp.evTxt }}</span>
+              <span style="font-size:12px; color:var(--color-neutral-700);">{{ cp.evSub }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blueprint" style="padding:18px; display:flex; flex-direction:column; gap:4px;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 20px; margin-bottom:8px;">
+            <h3 style="margin:0; margin-right:auto;">Readiness by pillar</h3>
+            <span style="font-size:12px; color:var(--color-neutral-700); display:flex; align-items:center; gap:6px;"><i style="width:2px; height:14px; background:var(--color-text); display:inline-block;"></i>{{ prevMarkerNote }}</span>
+          </div>
+          <sc-for list="{{ cp.pillars }}" as="pr" hint-placeholder-count="12">
+            <button onClick="{{ pr.onClick }}" style="display:grid; grid-template-columns:24px minmax(120px, 230px) minmax(0,1fr) 48px 44px 86px; align-items:center; gap:12px; background:none; border:0; border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent); padding:9px 4px; text-align:left; cursor:pointer; color:var(--color-text);" style-hover="background:var(--color-neutral-200)">
+              <span style="font-size:12px; color:var(--color-neutral-600);">{{ pr.num }}</span>
+              <span style="font-size:14px;">{{ pr.name }}</span>
+              <span style="height:18px; background:var(--color-neutral-200); position:relative;"><span style="position:absolute; left:0; top:0; bottom:0; width:{{ pr.width }}; background:{{ pr.fill }};"></span><span style="position:absolute; top:-3px; bottom:-3px; width:2px; left:{{ pr.prevLeft }}; background:var(--color-text); opacity:{{ pr.prevOp }};"></span></span>
+              <span style="font-family:var(--font-heading); font-weight:600; font-size:18px; text-align:right;">{{ pr.scoreTxt }}</span>
+              <span style="font-size:12px; text-align:right; color:{{ pr.deltaColor }};">{{ pr.deltaTxt }}</span>
+              <span style="justify-self:end; font-size:11px; padding:2px 8px; background:{{ pr.tint }}; color:{{ pr.ink }};">{{ pr.band }}</span>
+            </button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ cmp.has }}" hint-placeholder-val="{{ false }}">
+          <div class="blueprint" style="padding:18px; display:flex; flex-direction:column; gap:16px;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display:flex; flex-wrap:wrap; align-items:flex-end; gap:10px 16px;">
+              <div style="display:flex; flex-direction:column; gap:2px; margin-right:auto;">
+                <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">Assessment comparison</span>
+                <h3 style="margin:0;">Pillar change: {{ cmp.fromK }} vs {{ cmp.toK }}</h3>
+              </div>
+              <label style="display:flex; flex-direction:column; gap:3px;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">Baseline</span>
+                <select class="input" value="{{ cmp.fromK }}" onChange="{{ cmp.onFrom }}" style="width:auto; min-width:130px; min-height:34px; padding:4px 8px; font-size:13px;">
+                  <sc-for list="{{ cmp.fromOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.value }}">{{ o.label }}</option></sc-for>
+                </select>
+              </label>
+              <label style="display:flex; flex-direction:column; gap:3px;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">Compared with</span>
+                <select class="input" value="{{ cmp.toK }}" onChange="{{ cmp.onTo }}" style="width:auto; min-width:130px; min-height:34px; padding:4px 8px; font-size:13px;">
+                  <sc-for list="{{ cmp.toOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.value }}">{{ o.label }}</option></sc-for>
+                </select>
+              </label>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:12px;">
+              <div style="border:1px solid var(--color-divider); padding:12px 14px; display:flex; flex-direction:column; gap:4px;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">{{ cmp.fromK }} · overall</span>
+                <span style="font-family:var(--font-heading); font-weight:600; font-size:38px; line-height:1; color:var(--color-neutral-700);">{{ cmp.fromOv }}</span>
+              </div>
+              <div style="border:1px solid var(--color-divider); padding:12px 14px; display:flex; flex-direction:column; gap:4px;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">{{ cmp.toK }} · overall</span>
+                <span style="font-family:var(--font-heading); font-weight:600; font-size:38px; line-height:1; color:var(--color-accent-800);">{{ cmp.toOv }}</span>
+              </div>
+              <div style="border:1px solid {{ cmp.dInk }}; background:{{ cmp.dBg }}; padding:12px 14px; display:flex; flex-direction:column; gap:4px;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:{{ cmp.dInk }};">Change</span>
+                <span style="font-family:var(--font-heading); font-weight:600; font-size:38px; line-height:1; color:{{ cmp.dInk }};">{{ cmp.dTxt }}</span>
+              </div>
+              <div style="border:1px solid var(--color-divider); padding:12px 14px; display:flex; flex-direction:column; gap:6px; font-size:13px;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">Pillars</span>
+                <span><strong style="font-weight:600; color:oklch(0.38 0.08 155);">{{ cmp.up }}</strong> improved · <strong style="font-weight:600; color:oklch(0.45 0.13 28);">{{ cmp.down }}</strong> declined · <strong style="font-weight:600;">{{ cmp.same }}</strong> unchanged</span>
+              </div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px 18px; font-size:12px; color:var(--color-neutral-800);">
+              <span style="display:flex; align-items:center; gap:6px;"><i style="width:12px; height:10px; display:inline-block; background:var(--color-accent-300);"></i>{{ cmp.fromK }}</span>
+              <span style="display:flex; align-items:center; gap:6px;"><i style="width:12px; height:10px; display:inline-block; background:var(--color-accent-700);"></i>{{ cmp.toK }}</span>
+              <span style="margin-left:auto; color:var(--color-neutral-600);">Sorted by baseline score · click a pillar for question-level detail</span>
+            </div>
+            <div style="display:flex; flex-direction:column;">
+              <sc-for list="{{ cmp.rows }}" as="cr" hint-placeholder-count="11">
+                <button onClick="{{ cr.onClick }}" style="display:grid; grid-template-columns:minmax(120px, 230px) minmax(0,1fr) 64px; align-items:center; gap:14px; background:none; border:0; border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent); padding:8px 4px; text-align:left; cursor:pointer; color:var(--color-text);" style-hover="background:var(--color-neutral-200)">
+                  <span style="font-size:14px;"><span style="color:var(--color-neutral-600); font-size:12px; margin-right:8px;">{{ cr.num }}</span>{{ cr.name }}</span>
+                  <span style="display:flex; flex-direction:column; gap:3px;">
+                    <span style="display:flex; align-items:center; gap:6px;"><span style="flex:none; width:calc({{ cr.aW }} * 0.86); min-width:2px; height:11px; background:var(--color-accent-300);"></span><span style="font-size:11px; font-weight:600; color:var(--color-neutral-700);">{{ cr.aTxt }}</span></span>
+                    <span style="display:flex; align-items:center; gap:6px;"><span style="flex:none; width:calc({{ cr.bW }} * 0.86); min-width:2px; height:11px; background:var(--color-accent-700);"></span><span style="font-size:11px; font-weight:600; color:var(--color-accent-800);">{{ cr.bTxt }}</span></span>
+                  </span>
+                  <span style="font-family:var(--font-heading); font-weight:600; font-size:18px; text-align:right; color:{{ cr.dInk }};">{{ cr.dTxt }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ cmp.single }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:12px 14px; border:1px dashed var(--color-divider); font-size:13px; color:var(--color-neutral-700);">Assessment comparison becomes available once {{ cp.name }} has a second {{ hazardName }} assessment on record.</div>
+        </sc-if>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isPillar }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Pillar analysis" style="display:flex; flex-direction:column; gap:20px;">
+        <div>
+          <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">Pillar analysis · {{ roundLabel }}</span>
+          <h1 style="margin:4px 0 0; font-size:40px;">{{ pa.num }} · {{ pa.name }}</h1>
+        </div>
+        <div data-noprint="1" style="display:flex; flex-wrap:wrap; gap:6px;">
+          <sc-for list="{{ pillarChips }}" as="pc" hint-placeholder-count="12">
+            <button onClick="{{ pc.onClick }}" title="{{ pc.name }}" style="padding:6px 10px; font-size:13px; border:1px solid {{ pc.border }}; background:{{ pc.bg }}; color:{{ pc.ink }}; cursor:pointer;">{{ pc.num }} {{ pc.short }}</button>
+          </sc-for>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap:24px; align-items:start;">
+          <div class="blueprint" style="padding:18px; display:flex; flex-direction:column; gap:4px;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h3 style="margin:0 0 8px;">Across the region</h3>
+            <sc-for list="{{ pa.regionRows }}" as="rr" hint-placeholder-count="10">
+              <button onClick="{{ rr.onClick }}" style="display:grid; grid-template-columns:minmax(90px, 130px) minmax(0,1fr) 44px; align-items:center; gap:10px; background:{{ rr.rowBg }}; border:0; padding:7px 6px; text-align:left; cursor:{{ rr.cursor }}; color:var(--color-text);" style-hover="background:var(--color-neutral-200)">
+                <span style="font-size:14px; font-weight:500; color:{{ rr.nameInk }};">{{ rr.name }}</span>
+                <span style="height:14px; background:var(--color-neutral-200);"><span style="display:block; height:100%; width:{{ rr.width }}; background:{{ rr.fill }};"></span></span>
+                <span style="font-family:var(--font-heading); font-weight:600; font-size:17px; text-align:right;">{{ rr.scoreTxt }}</span>
+              </button>
+            </sc-for>
+          </div>
+          <div class="blueprint" style="padding:18px; display:flex; flex-direction:column; gap:14px;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:10px;">
+              <h3 style="margin:0; margin-right:auto;">{{ pa.country }}</h3>
+              <span style="font-family:var(--font-heading); font-weight:600; font-size:30px; line-height:1;">{{ pa.scoreTxt }}</span>
+              <span style="font-size:11px; padding:2px 8px; background:{{ pa.tint }}; color:{{ pa.ink }};">{{ pa.band }}</span>
+            </div>
+            <sc-if value="{{ pa.empty }}" hint-placeholder-val="{{ false }}">
+              <p style="margin:0; font-size:14px; color:var(--color-neutral-700);">This pillar was not assessed in this round.</p>
+            </sc-if>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap:18px;">
+              <div style="display:flex; flex-direction:column; gap:6px;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.40 0.08 155);">Capacity in place · {{ pa.yesN }}</span>
+                <sc-for list="{{ pa.yes }}" as="q" hint-placeholder-count="3">
+                  <div style="display:grid; grid-template-columns:40px minmax(0,1fr); gap:8px; padding:8px 0; border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+                    <span style="font-size:12px; color:var(--color-neutral-600);">{{ q.sn }}</span>
+                    <div style="display:flex; flex-direction:column; gap:4px;">
+                      <span style="font-size:13px; line-height:1.4;">{{ q.text }}</span>
+                      <span style="align-self:flex-start; font-size:10px; letter-spacing:0.04em; padding:1px 6px; border:1px solid {{ q.evBorder }}; color:{{ q.evInk }};">{{ q.ev }}</span>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:6px;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.45 0.13 28);">Gaps · {{ pa.noN }}</span>
+                <sc-for list="{{ pa.no }}" as="q" hint-placeholder-count="3">
+                  <div style="display:grid; grid-template-columns:40px minmax(0,1fr); gap:8px; padding:8px 0; border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+                    <span style="font-size:12px; color:oklch(0.45 0.13 28); font-weight:600;">{{ q.sn }}</span>
+                    <span style="font-size:13px; line-height:1.4;">{{ q.text }}</span>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ pa.hasGaps }}" hint-placeholder-val="{{ true }}">
+                  <button class="btn btn-primary" onClick="{{ goActions }}" style="align-self:flex-start; margin-top:6px;">Recommended actions for these gaps</button>
+                </sc-if>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <sc-if value="{{ isRegion }}" hint-placeholder-val="{{ true }}">
+          <div class="blueprint" style="padding:18px; display:flex; flex-direction:column; gap:10px;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <h3 style="margin:0;">Responses from Member States</h3>
+            <div style="overflow-x:auto;">
+              <table style="border-collapse:collapse; width:100%; min-width:900px; font-size:13px;">
+                <thead><tr>
+                  <th style="text-align:left; padding:6px; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; font-weight:500; color:var(--color-neutral-700); border-bottom:1px solid var(--color-divider);">Criterion</th>
+                  <sc-for list="{{ pa.codes }}" as="cd" hint-placeholder-count="10"><th style="padding:6px 2px; font-size:11px; font-weight:500; color:var(--color-neutral-700); border-bottom:1px solid var(--color-divider); width:48px;">{{ cd }}</th></sc-for>
+                  <th style="padding:6px; font-size:11px; font-weight:500; color:var(--color-neutral-700); border-bottom:1px solid var(--color-divider); width:60px;">Yes</th>
+                </tr></thead>
+                <tbody>
+                  <sc-for list="{{ pa.matrix }}" as="qr" hint-placeholder-count="6">
+                    <tr>
+                      <td style="padding:8px 6px; border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent); line-height:1.35;"><span style="color:var(--color-neutral-600); margin-right:8px;">{{ qr.sn }}</span>{{ qr.text }}</td>
+                      <sc-for list="{{ qr.cells }}" as="qc" hint-placeholder-count="10">
+                        <td style="text-align:center; border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);"><i title="{{ qc.tip }}" style="display:inline-block; width:14px; height:14px; background:{{ qc.fill }};"></i></td>
+                      </sc-for>
+                      <td style="text-align:center; font-weight:600; border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">{{ qr.yesTxt }}</td>
+                    </tr>
+                  </sc-for>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </sc-if>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isActions }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Anticipatory actions" style="display:flex; flex-direction:column; gap:20px;">
+        <div style="display:flex; flex-wrap:wrap; gap:12px 24px; align-items:flex-end;">
+          <div style="margin-right:auto; max-width:760px;">
+            <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">Anticipatory actions · {{ roundLabel }}</span>
+            <h1 style="margin:4px 0 6px; font-size:40px;">{{ act.country }}: gaps to actions</h1>
+            <p style="margin:0; font-size:14px; line-height:1.55; color:var(--color-neutral-800); text-wrap:pretty;">Each pillar below Adequate is listed with its unmet criteria. Report actions come from the country assessment. Use Generate to draft further actions with AI, then review them before adding them to the tracker.</p>
+          </div>
+          <span style="font-size:13px; color:var(--color-neutral-700);">{{ act.summary }}</span>
+        </div>
+        <div data-noprint="1" style="display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; padding:10px 14px; border:1px solid var(--color-divider);">
+          <span style="display:flex; align-items:center; gap:8px; font-size:13px; margin-right:auto;"><i style="width:8px; height:8px; display:inline-block; background:var(--color-accent);"></i>{{ aiMode }}</span>
+          <sc-if value="{{ aiNeedsKey }}" hint-placeholder-val="{{ false }}">
+            <sc-if value="{{ aiHasKey }}" hint-placeholder-val="{{ false }}">
+              <button class="btn btn-ghost" onClick="{{ clearKey }}" style="font-size:13px;">Remove API key</button>
+            </sc-if>
+            <input class="input" type="password" placeholder="Anthropic API key (sk-ant-…)" value="{{ keyDraft }}" onChange="{{ onKeyDraft }}" style="width:260px; min-height:34px; padding:4px 8px; font-size:13px;">
+            <button class="btn btn-secondary" onClick="{{ saveKey }}" style="font-size:13px;">Connect AI</button>
+            <span style="font-size:12px; color:var(--color-neutral-700); flex-basis:100%;">The key is stored only in this browser. For production, route AI calls through a WHO-managed server instead.</span>
+          </sc-if>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap:24px; align-items:start;">
+          <sc-for list="{{ act.cards }}" as="ac" hint-placeholder-count="4">
+            <div class="blueprint" style="padding:18px; display:flex; flex-direction:column; gap:12px;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <div style="display:flex; align-items:baseline; gap:10px;">
+                <span style="font-size:12px; color:var(--color-neutral-600);">{{ ac.num }}</span>
+                <h3 style="margin:0; margin-right:auto;">{{ ac.name }}</h3>
+                <span style="font-family:var(--font-heading); font-weight:600; font-size:24px;">{{ ac.scoreTxt }}</span>
+                <span style="font-size:11px; padding:2px 8px; background:{{ ac.tint }}; color:{{ ac.ink }};">{{ ac.band }}</span>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:4px;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:oklch(0.45 0.13 28);">Unmet criteria · {{ ac.gapN }}</span>
+                <sc-for list="{{ ac.gaps }}" as="g" hint-placeholder-count="2">
+                  <span style="font-size:13px; line-height:1.4; color:var(--color-neutral-800);"><span style="color:var(--color-neutral-600); margin-right:6px;">{{ g.sn }}</span>{{ g.text }}</span>
+                </sc-for>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:0;">
+                <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-accent-700); margin-bottom:4px;">Recommended actions</span>
+                <sc-for list="{{ ac.actions }}" as="a" hint-placeholder-count="2">
+                  <div style="display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:start; padding:10px 0; border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);">
+                    <div style="display:flex; flex-direction:column; gap:4px;">
+                      <span style="font-size:14px; line-height:1.45;">{{ a.text }}</span>
+                      <span style="align-self:flex-start; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; padding:1px 6px; background:{{ a.srcBg }}; color:{{ a.srcInk }};">{{ a.src }}</span>
+                    </div>
+                    <button onClick="{{ a.onAdd }}" disabled="{{ a.tracked }}" class="btn btn-secondary" style="font-size:12px; padding:4px 10px; white-space:nowrap;">{{ a.btn }}</button>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ ac.noActions }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-size:13px; color:var(--color-neutral-700); padding:8px 0;">No report actions for this pillar yet. Generate a draft.</span>
+                </sc-if>
+              </div>
+              <div data-noprint="1" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+                <button class="btn btn-primary" onClick="{{ ac.onGen }}" disabled="{{ ac.loading }}">{{ ac.genLabel }}</button>
+                <span style="font-size:12px; color:var(--color-neutral-700);">{{ ac.aiNote }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ act.none }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size:15px;">All pillars are at Adequate capacity. Keep capacity up with regular simulation exercises.</p>
+        </sc-if>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isTracker }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Action tracker" style="display:flex; flex-direction:column; gap:20px;">
+        <div style="display:flex; flex-wrap:wrap; gap:12px 24px; align-items:flex-end;">
+          <div style="margin-right:auto; max-width:720px;">
+            <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">Monitoring</span>
+            <h1 style="margin:4px 0 6px; font-size:40px;">Priority action tracker</h1>
+            <p style="margin:0; font-size:14px; line-height:1.55; color:var(--color-neutral-800);">Tracks whether priority actions from the previous assessment are being carried out. Export them to seed the mitigation and contingency plan.</p>
+            <p style="margin:6px 0 0; font-size:12px; color:oklch(0.45 0.13 28);">Prototype: starting statuses, owners and due dates are illustrative.</p>
+          </div>
+          <button class="btn btn-secondary" onClick="{{ onExport }}" data-noprint="1">Export to contingency plan (CSV)</button>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:16px;">
+          <sc-for list="{{ tr.stats }}" as="ts" hint-placeholder-count="4">
+            <button onClick="{{ ts.onClick }}" class="blueprint" style="padding:14px 16px; display:flex; flex-direction:column; gap:6px; text-align:left; cursor:pointer; background:{{ ts.bg }}; color:var(--color-text);">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:{{ ts.ink }};">{{ ts.label }}</span>
+              <span style="font-family:var(--font-heading); font-weight:600; font-size:38px; line-height:1;">{{ ts.n }}</span>
+            </button>
+          </sc-for>
+        </div>
+        <div data-noprint="1" style="display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+          <sc-if value="{{ isRegion }}" hint-placeholder-val="{{ true }}">
+            <select class="input" value="{{ tCountry }}" onChange="{{ onTCountry }}" style="width:auto; min-height:32px; padding:4px 8px; font-size:13px;">
+              <option value="all">All countries</option>
+              <sc-for list="{{ countryOpts }}" as="co" hint-placeholder-count="0"><option value="{{ co.value }}">{{ co.label }}</option></sc-for>
+            </select>
+          </sc-if>
+          <span style="font-size:13px; color:var(--color-neutral-700);">{{ tr.caption }}</span>
+          <sc-if value="{{ tr.filtered }}" hint-placeholder-val="{{ false }}">
+            <button class="btn btn-ghost" onClick="{{ clearTFilter }}" style="font-size:13px;">Clear status filter</button>
+          </sc-if>
+        </div>
+        <sc-if value="{{ tr.empty }}" hint-placeholder-val="{{ false }}">
+          <div class="blueprint" style="padding:18px; display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <span style="font-size:14px; margin-right:auto;">No {{ hazardName }} actions are tracked yet. Add them from Anticipatory actions.</span>
+            <button class="btn btn-primary" onClick="{{ goActions }}">Go to anticipatory actions</button>
+          </div>
+        </sc-if>
+        <div style="overflow-x:auto;">
+          <table class="table" style="min-width:900px;">
+            <thead><tr><th>Action</th><sc-if value="{{ isRegion }}" hint-placeholder-val="{{ true }}"><th>Country</th></sc-if><th>Pillar</th><th>Owner</th><th>Due</th><th>Source</th><th style="width:150px;">Status</th></tr></thead>
+            <tbody>
+              <sc-for list="{{ tr.rows }}" as="t" hint-placeholder-count="8">
+                <tr>
+                  <td style="font-size:13px; line-height:1.45; max-width:460px;">{{ t.action }}</td>
+                  <sc-if value="{{ isRegion }}" hint-placeholder-val="{{ true }}"><td style="font-size:13px; white-space:nowrap;">{{ t.country }}</td></sc-if>
+                  <td style="font-size:13px;">{{ t.pillar }}</td>
+                  <td style="font-size:13px;">{{ t.owner }}</td>
+                  <td style="font-size:13px; white-space:nowrap; color:{{ t.dueInk }};">{{ t.due }}</td>
+                  <td style="font-size:11px; color:var(--color-neutral-700); white-space:nowrap;">{{ t.src }}</td>
+                  <td>
+                    <select value="{{ t.st }}" onChange="{{ t.onStatus }}" style="border:1px solid {{ t.ink }}; background:{{ t.tint }}; color:{{ t.ink }}; padding:4px 6px; font-size:12px; width:100%;">
+                      <option value="todo">Not started</option>
+                      <option value="progress">In progress</option>
+                      <option value="blocked">Blocked</option>
+                      <option value="done">Implemented</option>
+                    </select>
+                  </td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isEvidence }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Evidence repository" style="display:flex; flex-direction:column; gap:20px;">
+        <div style="max-width:760px;">
+          <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">Evidence repository · {{ evRound }}</span>
+          <h1 style="margin:4px 0 6px; font-size:40px;">{{ ev.country }}: supporting evidence</h1>
+          <p style="margin:0; font-size:14px; line-height:1.55; color:var(--color-neutral-800);">Capacities reported as “Yes” that can be backed by a document, such as plans, SOPs, guidelines, rosters or MoUs. Countries upload the files and the regional team verifies them.</p>
+          <p style="margin:6px 0 0; font-size:12px; color:oklch(0.45 0.13 28);">Prototype: document statuses are illustrative.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:16px;">
+          <sc-for list="{{ ev.stats }}" as="es" hint-placeholder-count="4">
+            <div class="blueprint" style="padding:14px 16px; display:flex; flex-direction:column; gap:6px;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:{{ es.ink }};">{{ es.label }}</span>
+              <span style="font-family:var(--font-heading); font-weight:600; font-size:38px; line-height:1;">{{ es.n }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="table" style="min-width:880px;">
+            <thead><tr><th style="width:60px;">S/N</th><th>Reported capacity</th><th>Pillar</th><th>Document</th><th style="width:110px;">Status</th><th style="width:170px;"></th></tr></thead>
+            <tbody>
+              <sc-for list="{{ ev.rows }}" as="e" hint-placeholder-count="8">
+                <tr>
+                  <td style="font-size:12px; color:var(--color-neutral-600);">{{ e.sn }}</td>
+                  <td style="font-size:13px; line-height:1.4; max-width:440px;">{{ e.text }}</td>
+                  <td style="font-size:13px; white-space:nowrap;">{{ e.pillar }}</td>
+                  <td style="font-size:12px;"><span style="display:block;">{{ e.file }}</span><span style="color:var(--color-neutral-600);">{{ e.date }}</span></td>
+                  <td><span style="font-size:11px; padding:2px 8px; background:{{ e.tint }}; color:{{ e.ink }}; white-space:nowrap;">{{ e.stLabel }}</span></td>
+                  <td>
+                    <div style="display:flex; gap:6px; justify-content:flex-end;">
+                      <sc-if value="{{ e.canUpload }}" hint-placeholder-val="{{ false }}"><button class="btn btn-secondary" onClick="{{ e.onUpload }}" style="font-size:12px; padding:4px 10px;">{{ e.upLabel }}</button></sc-if>
+                      <sc-if value="{{ e.canReview }}" hint-placeholder-val="{{ false }}">
+                        <button class="btn btn-primary" onClick="{{ e.onVerify }}" style="font-size:12px; padding:4px 10px;">Verify</button>
+                        <button class="btn btn-secondary" onClick="{{ e.onReject }}" style="font-size:12px; padding:4px 10px;">Reject</button>
+                      </sc-if>
+                    </div>
+                  </td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        <input type="file" ref="{{ fileRef }}" onChange="{{ onFile }}" style="display:none;">
+      </section>
+    </sc-if>
+
+    <sc-if value="{{ isReport }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="Country report" style="display:flex; flex-direction:column; gap:16px; align-items:center;">
+        <div data-noprint="1" style="display:flex; flex-wrap:wrap; gap:8px; width:100%; max-width:900px; align-items:center;">
+          <div style="display:flex; flex-direction:column; gap:4px; margin-right:auto;">
+            <span style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700);">Report type</span>
+            <div style="display:flex; border:1px solid var(--color-divider);">
+              <sc-for list="{{ rtOpts }}" as="rt" hint-placeholder-count="2">
+                <button onClick="{{ rt.onClick }}" style="border:0; padding:8px 14px; font-size:13px; cursor:pointer; white-space:nowrap; background:{{ rt.bg }}; color:{{ rt.ink }};">{{ rt.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <span style="font-size:12px; color:var(--color-neutral-700); max-width:340px; line-height:1.4;">{{ rtNote }}</span>
+          <button class="btn btn-primary" onClick="{{ onPrint }}">{{ pdfLabel }}</button>
+        </div>
+        <div data-noprint="1" class="blueprint" style="width:100%; max-width:900px; padding:16px 18px; display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex; flex-direction:column; gap:3px; margin-right:auto; min-width:260px; flex:1 1 320px;">
+            <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">Summary presentation</span>
+            <span style="font-family:var(--font-heading); font-weight:600; font-size:20px;">Generate a PowerPoint from the current data</span>
+            <span style="font-size:13px; color:var(--color-neutral-700); line-height:1.45;">Capacities, gaps, anticipatory actions by time horizon, and tracker progress, for {{ roundLabel }}. The slides are editable.</span>
+            <sc-if value="{{ pptMsgOn }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px; color:{{ pptMsgInk }};">{{ pptMsg }}</span></sc-if>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <button class="btn btn-primary" onClick="{{ onPptCountry }}" disabled="{{ pptBusy }}">{{ pptCountryLabel }}</button>
+            <sc-if value="{{ isRegion }}" hint-placeholder-val="{{ true }}">
+              <button class="btn btn-secondary" onClick="{{ onPptRegion }}" disabled="{{ pptBusy }}">Regional summary (.pptx)</button>
+            </sc-if>
+          </div>
+        </div>
+        <article style="width:100%; max-width:900px; background:#fbfbfc; border:1px solid var(--color-divider); padding:48px clamp(20px, 5vw, 56px); display:flex; flex-direction:column; gap:22px; position:relative; overflow:hidden;">
+          <sc-if value="{{ isDemo }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute; inset:0; display:grid; place-items:center; pointer-events:none; z-index:0;"><span style="transform:rotate(-30deg); font-family:var(--font-heading); font-weight:600; font-size:clamp(48px, 9vw, 96px); letter-spacing:0.08em; color:oklch(0.45 0.13 28); opacity:0.12; white-space:nowrap;">DUMMY TEST DATA</span></div>
+            <div style="border:2px solid oklch(0.45 0.13 28); color:oklch(0.38 0.12 28); padding:8px 12px; font-size:12px; font-weight:600; letter-spacing:0.04em;">NOT FOR CIRCULATION: this report uses simulated 2026 data for testing only.</div>
+          </sc-if>
+          <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">
+            <span>WHO African Region · {{ hazardName }} preparedness and readiness</span><span>{{ roundLabel }}</span>
+          </div>
+          <h1 style="margin:0; font-size:44px;">{{ rp.country }}</h1>
+          <h4 style="margin:-12px 0 0; font-weight:400; color:var(--color-neutral-700);">{{ rp.subtitle }}</h4>
+          <p style="margin:0; font-size:14px; line-height:1.65; text-wrap:pretty;">{{ rp.intro }}</p>
+          <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:baseline; border-top:1px solid var(--color-divider); border-bottom:1px solid var(--color-divider); padding:14px 0;">
+            <span style="font-size:13px;">Overall <strong style="font-family:var(--font-heading); font-size:28px; margin-left:6px;">{{ rp.ovTxt }}</strong></span>
+            <span style="font-size:13px;">Capacity <strong style="font-weight:600;">{{ rp.band }}</strong></span>
+            <span style="font-size:13px;">{{ rp.counts }}</span>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(62px, 1fr)); gap:2px;">
+            <sc-for list="{{ rp.strip }}" as="s" hint-placeholder-count="12">
+              <div style="background:{{ s.tint }}; color:{{ s.ink }}; padding:8px 4px; text-align:center; display:flex; flex-direction:column; gap:2px;">
+                <span style="font-size:10px; line-height:1.2;">{{ s.short }}</span>
+                <span style="font-family:var(--font-heading); font-weight:600; font-size:18px;">{{ s.txt }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <table style="border-collapse:collapse; width:100%; font-size:13px;">
+            <thead><tr>
+              <th style="text-align:left; padding:8px 6px; border-bottom:2px solid var(--color-text); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;">Pillar</th>
+              <th style="text-align:right; padding:8px 6px; border-bottom:2px solid var(--color-text); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; width:60px;">Score</th>
+              <th style="text-align:right; padding:8px 6px; border-bottom:2px solid var(--color-text); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; width:70px;">{{ rp.deltaHead }}</th>
+              <th style="text-align:left; padding:8px 6px; border-bottom:2px solid var(--color-text); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; width:96px;">Capacity</th>
+              <th style="text-align:left; padding:8px 6px; border-bottom:2px solid var(--color-text); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;">Priority actions</th>
+            </tr></thead>
+            <tbody>
+              <sc-for list="{{ rp.rows }}" as="row" hint-placeholder-count="12">
+                <tr style="break-inside:avoid;">
+                  <td style="padding:10px 6px; vertical-align:top; border-bottom:1px solid var(--color-divider); font-weight:500;">{{ row.num }}. {{ row.name }}</td>
+                  <td style="padding:10px 6px; vertical-align:top; border-bottom:1px solid var(--color-divider); text-align:right; font-family:var(--font-heading); font-weight:600; font-size:16px;">{{ row.scoreTxt }}</td>
+                  <td style="padding:10px 6px; vertical-align:top; border-bottom:1px solid var(--color-divider); text-align:right; color:{{ row.dInk }};">{{ row.dTxt }}</td>
+                  <td style="padding:10px 6px; vertical-align:top; border-bottom:1px solid var(--color-divider);"><span style="font-size:11px; padding:2px 6px; background:{{ row.tint }}; color:{{ row.ink }};">{{ row.band }}</span></td>
+                  <td style="padding:10px 6px; vertical-align:top; border-bottom:1px solid var(--color-divider);">
+                    <ul style="margin:0; padding-left:16px; display:flex; flex-direction:column; gap:3px; line-height:1.45;">
+                      <sc-for list="{{ row.actions }}" as="x" hint-placeholder-count="1"><li>{{ x }}</li></sc-for>
+                    </ul>
+                  </td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+          <span style="font-size:11px; color:var(--color-neutral-600);">Capacity bands: Adequate ≥80% · Moderate 50–79% · Limited below 50%. Scores are the share of readiness criteria met per pillar. Overall is the weighted share of all scored criteria met, as in the source workbook.</span>
+          <sc-if value="{{ isDetailed }}" hint-placeholder-val="{{ false }}">
+            <div style="break-before:page; display:flex; flex-direction:column; gap:8px; padding-top:18px; border-top:2px solid var(--color-text);">
+              <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent-700);">Annex · Submitted responses</span>
+              <h2 style="margin:0; font-size:30px;">Question-by-question assessment responses</h2>
+              <p style="margin:0; font-size:13px; line-height:1.55; color:var(--color-neutral-800); text-wrap:pretty;">{{ rp.annexIntro }}</p>
+            </div>
+            <sc-for list="{{ rp.detail }}" as="dp" hint-placeholder-count="3">
+              <div style="display:flex; flex-direction:column; gap:6px;">
+                <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; break-after:avoid;">
+                  <h4 style="margin:0; margin-right:auto; font-size:19px;">{{ dp.title }}</h4>
+                  <span style="font-size:12px; color:var(--color-neutral-700);">{{ dp.meta }}</span>
+                  <span style="font-size:11px; padding:2px 8px; background:{{ dp.tint }}; color:{{ dp.ink }};">{{ dp.band }}</span>
+                </div>
+                <table style="border-collapse:collapse; width:100%; font-size:12px;">
+                  <thead><tr>
+                    <th style="text-align:left; padding:8px 6px; border-bottom:2px solid var(--color-text); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; width:52px;">S/N</th>
+                    <th style="text-align:left; padding:8px 6px; border-bottom:2px solid var(--color-text); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;">Readiness criterion</th>
+                    <sc-if value="{{ rp.hasPrev }}" hint-placeholder-val="{{ false }}"><th style="text-align:center; padding:8px 6px; border-bottom:2px solid var(--color-text); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; width:78px;">{{ rp.prevHead }}</th></sc-if>
+                    <th style="text-align:center; padding:8px 6px; border-bottom:2px solid var(--color-text); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; width:92px;">{{ rp.curHead }}</th>
+                  </tr></thead>
+                  <tbody>
+                    <sc-for list="{{ dp.qs }}" as="q" hint-placeholder-count="4">
+                      <tr style="break-inside:avoid;">
+                        <td style="padding:7px 6px; vertical-align:top; border-bottom:1px solid var(--color-divider); color:var(--color-neutral-600);">{{ q.sn }}</td>
+                        <td style="padding:7px 6px; vertical-align:top; border-bottom:1px solid var(--color-divider); line-height:1.4;">{{ q.text }}</td>
+                        <sc-if value="{{ rp.hasPrev }}" hint-placeholder-val="{{ false }}"><td style="padding:7px 6px; vertical-align:top; border-bottom:1px solid var(--color-divider); text-align:center; color:var(--color-neutral-700);">{{ q.prev }}</td></sc-if>
+                        <td style="padding:7px 6px; vertical-align:top; border-bottom:1px solid var(--color-divider); text-align:center;"><span style="display:inline-block; min-width:52px; font-size:11px; font-weight:600; padding:2px 6px; background:{{ q.rBg }}; color:{{ q.rInk }};">{{ q.resp }}</span><span style="display:block; font-size:10px; margin-top:2px; color:{{ q.chInk }};">{{ q.ch }}</span></td>
+                      </tr>
+                    </sc-for>
+                  </tbody>
+                </table>
+              </div>
+            </sc-for>
+          </sc-if>
+        </article>
+      </section>
+    </sc-if>
+
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultHazard&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;cholera&quot;,&quot;fvd&quot;],&quot;default&quot;:&quot;cholera&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Data&quot;},&quot;defaultRole&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;region&quot;,&quot;kenya&quot;,&quot;uganda&quot;,&quot;rwanda&quot;,&quot;malawi&quot;],&quot;default&quot;:&quot;region&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Access&quot;},&quot;maskPeers&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Access&quot;}}">
+class Component extends DCLogic {
+  state = { hazard: null, tab: 'overview', round: 'latest', role: null, country: 'kenya', pillar: 1, mapPillar: 0, mapFocus: null, tFilter: 'all', tCountry: 'all', ai: {}, trackers: null, evidence: null, apiKey: '', keyDraft: '', cmp: {}, reportType: 'summary' };
+  fileRef = React.createRef();
+  B = {
+    adequate: { label: 'Adequate', fill: 'oklch(0.70 0.10 155)', tint: 'oklch(0.92 0.04 155)', ink: 'oklch(0.38 0.08 155)' },
+    moderate: { label: 'Moderate', fill: 'oklch(0.80 0.12 80)', tint: 'oklch(0.94 0.05 85)', ink: 'oklch(0.44 0.09 65)' },
+    limited: { label: 'Limited', fill: 'oklch(0.64 0.14 28)', tint: 'oklch(0.93 0.04 28)', ink: 'oklch(0.45 0.13 28)' },
+    na: { label: 'Not assessed', fill: '#d4d4d7', tint: '#e7e7ea', ink: '#5d5d60' }
+  };
+  ST = {
+    todo: { label: 'Not started', tint: '#e7e7ea', ink: '#424244' },
+    progress: { label: 'In progress', tint: 'var(--color-accent-100)', ink: 'var(--color-accent-800)' },
+    blocked: { label: 'Blocked', tint: 'oklch(0.93 0.04 28)', ink: 'oklch(0.45 0.13 28)' },
+    done: { label: 'Implemented', tint: 'oklch(0.92 0.04 155)', ink: 'oklch(0.38 0.08 155)' }
+  };
+  EV = {
+    verified: { label: 'Verified', tint: 'oklch(0.92 0.04 155)', ink: 'oklch(0.38 0.08 155)' },
+    pending: { label: 'Pending review', tint: 'var(--color-accent-100)', ink: 'var(--color-accent-800)' },
+    missing: { label: 'No evidence', tint: 'oklch(0.93 0.04 28)', ink: 'oklch(0.45 0.13 28)' },
+    rejected: { label: 'Rejected', tint: 'oklch(0.93 0.04 28)', ink: 'oklch(0.45 0.13 28)' }
+  };
+  componentDidMount() {
+    const go = () => (window.PDX_DATA ? this.init() : setTimeout(go, 50)); go();
+    this._onMap = e => this.openCountryIso(e.detail.iso);
+    document.addEventListener('mapselect', this._onMap);
+  }
+  componentWillUnmount() { document.removeEventListener('mapselect', this._onMap); }
+  init() {
+    const D = window.PDX_DATA, trackers = {}, evidence = {}; let ui = null, k = '';
+    for (const hz in D) {
+      let t = null, e = null;
+      try { t = JSON.parse(localStorage.getItem('pdx-tracker-' + hz + '-v2')); e = JSON.parse(localStorage.getItem('pdx-evidence-' + hz + '-v2')); } catch (x) {}
+      trackers[hz] = t || D[hz].tracker.map(x => ({ ...x }));
+      evidence[hz] = e || D[hz].evidence.map(x => ({ ...x }));
+    }
+    try { ui = JSON.parse(localStorage.getItem('pdx-ui-v4')); k = localStorage.getItem('pdx-anthropic-key') || ''; } catch (x) {}
+    this.setState({ ...(ui || {}), apiKey: k, trackers, evidence });
+  }
+  save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  set(o) { this.setState(o, () => { const s = this.state; this.save('pdx-ui-v4', { hazard: s.hazard, tab: s.tab, round: s.round, role: s.role, country: s.country, pillar: s.pillar }); }); }
+  hz() { return this.state.hazard || this.props.defaultHazard || 'cholera'; }
+  H() { return window.PDX_DATA[this.hz()]; }
+  band(s) { return s == null ? 'na' : s >= 80 ? 'adequate' : s >= 50 ? 'moderate' : 'limited'; }
+  mean(a) { const v = a.filter(x => x != null); return v.length ? Math.round(v.reduce((p, q) => p + q, 0) / v.length) : null; }
+  pct(s) { return s == null ? '—' : s + '%'; }
+  keys(c) { return Object.keys(c.a).sort(); }
+  pick(c, r) { const k = r === 'latest' ? this.keys(c).pop() : (c.a[r] ? r : null); return k ? { key: k, A: c.a[k] } : null; }
+  prevOf(c, key) { const ks = this.keys(c), i = ks.indexOf(key); return i > 0 ? { key: ks[i - 1], A: c.a[ks[i - 1]] } : null; }
+  qs(c, key, p) { const H = this.H(), A = c.a[key]; return (H.questions[p] || []).map(q => ({ sn: q[0], text: q[1], yes: A ? A.ans[q[0]] : null })); }
+  delta(d) {
+    if (d == null) return { txt: '—', color: 'var(--color-neutral-600)' };
+    return { txt: (d > 0 ? '▲ ' : d < 0 ? '▼ ' : '') + Math.abs(d), color: d > 0 ? 'oklch(0.42 0.09 155)' : d < 0 ? 'oklch(0.48 0.14 28)' : 'var(--color-neutral-600)' };
+  }
+  role() { const r = this.state.role || this.props.defaultRole || 'region'; return r === 'region' || this.H().countries.some(c => c.id === r) ? r : 'region'; }
+  openCountryIso(iso) { const c = this.H().countries.find(x => x.iso === iso); if (!c) return; if (this.role() !== 'region' && c.id !== this.role()) return; this.setState(s => ({ mapFocus: s.mapFocus === c.id ? 'none' : c.id })); }
+  reportActions(c, p) {
+    const H = this.H(), sus = /sustain|maintain and sustain|regular simulation|refresher training and update/i;
+    const own = ((H.reportActs[c.id] || {})[p] || []).map(a => a.trim()).filter(a => a && !sus.test(a));
+    if (own.length) return own.map(a => ({ text: a, src: H.reportYear + ' country report' }));
+    return (H.lib[p] || []).slice(0, 3).map(a => ({ text: a, src: 'Regional action library' }));
+  }
+  tracker() { return (this.state.trackers || {})[this.hz()] || []; }
+  setTracker(tr) { const hz = this.hz(); this.setState(s => ({ trackers: { ...s.trackers, [hz]: tr } })); this.save('pdx-tracker-' + hz + '-v2', tr); }
+  evid() { return (this.state.evidence || {})[this.hz()] || []; }
+  setEvid(ev) { const hz = this.hz(); this.setState(s => ({ evidence: { ...s.evidence, [hz]: ev } })); this.save('pdx-evidence-' + hz + '-v2', ev); }
+  addTrack(c, p, text, src) { this.setTracker([...this.tracker(), { id: Date.now(), c: c.id, p, a: text, src: src === 'AI draft' ? 'AI draft (reviewed)' : src === 'Library suggestion' ? 'Library suggestion (reviewed)' : src, owner: 'To be assigned', due: '', st: 'todo' }]); }
+  setStatus(id, st) { this.setTracker(this.tracker().map(t => t.id === id ? { ...t, st } : t)); }
+  setEv(i, patch) { this.setEvid(this.evid().map((e, j) => j === i ? { ...e, ...patch } : e)); }
+  async gen(c, p, sc, gaps, existing) {
+    const H = this.H(), key = this.hz() + '-' + c.id + '-' + p, P = H.pillars[p - 1];
+    const cur = this.state.ai[key] || { items: [] };
+    this.setState(s => ({ ai: { ...s.ai, [key]: { ...cur, loading: true, error: null } } }));
+    const have = [...existing, ...cur.items.map(i => i.t)];
+    const prompt = 'You are a WHO AFRO emergency preparedness advisor. Hazard: ' + H.name + '. Country: ' + c.name + '. Readiness pillar: ' + P.name + ' (score ' + sc + '%).\nUnmet readiness criteria:\n' + gaps.map(g => '- ' + g.sn + ' ' + g.text).join('\n') + '\nExisting recommended actions (do not repeat):\n' + (have.map(a => '- ' + a).join('\n') || '- none') + '\nPropose 3 additional specific, time-bound anticipatory actions (max 28 words each) the Ministry of Health and partners can take to close these gaps before the next ' + H.name.toLowerCase() + ' outbreak. Respond ONLY with a JSON array of strings.';
+    const parse = txt => { const m = String(txt).match(/\[[\s\S]*\]/); return (m ? JSON.parse(m[0]) : []).filter(x => typeof x === 'string'); };
+    const offline = () => {
+      const lib = (H.lib[p] || []).filter(a => !have.includes(a)).slice(0, 3);
+      const tmpl = gaps.filter(g => !have.some(h => h.includes(g.sn))).slice(0, 3 - lib.length).map(g => 'Close gap ' + g.sn + ' within the next quarter: ' + g.text.replace(/^(Country |There is |Availability of )/i, '').replace(/\.$/, '') + ', with a named lead and progress review at the next readiness meeting.');
+      return [...lib, ...tmpl];
+    };
+    try {
+      let arr, src = 'AI draft', note = null; const apiKey = this.state.apiKey;
+      if (window.claude && window.claude.complete) arr = parse(await window.claude.complete(prompt));
+      else if (apiKey) {
+        const r = await fetch('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' }, body: JSON.stringify({ model: 'claude-sonnet-4-5', max_tokens: 800, messages: [{ role: 'user', content: prompt }] }) });
+        if (!r.ok) throw new Error('AI service error ' + r.status + (r.status === 401 ? ' (check API key)' : ''));
+        const j = await r.json(); arr = parse(j.content && j.content[0] && j.content[0].text);
+      } else { arr = offline(); src = 'Library suggestion'; note = 'Offline mode: suggestions drafted from the unmet criteria. Add an API key to use live AI.'; }
+      if (!arr.length) { arr = offline(); src = 'Library suggestion'; }
+      this.setState(s => ({ ai: { ...s.ai, [key]: { loading: false, note, items: [...cur.items, ...arr.map(t => ({ t, src }))] } } }));
+    } catch (e) {
+      const arr = offline();
+      this.setState(s => ({ ai: { ...s.ai, [key]: { loading: false, error: (e.message || 'Generation failed') + '. Showing library suggestions instead.', items: [...cur.items, ...arr.map(t => ({ t, src: 'Library suggestion' }))] } } }));
+    }
+  }
+  exportCsv(rows) {
+    const H = this.H(), esc = v => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+    const lines = [['Hazard', 'Country', 'Pillar', 'Action', 'Owner', 'Due', 'Status', 'Source'].join(',')].concat(rows.map(t => [H.name, (H.countries.find(c => c.id === t.c) || {}).name, H.pillars[t.p - 1].name, t.a, t.owner, t.due, this.ST[t.st].label, t.src].map(esc).join(',')));
+    const url = URL.createObjectURL(new Blob([lines.join('\n')], { type: 'text/csv' }));
+    const a = document.createElement('a'); a.href = url; a.download = H.id + '-priority-actions.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  ctx() {
+    const H = this.H(), S = this.state, r = S.round === 'latest' || H.rounds.includes(S.round) ? S.round : 'latest';
+    const cs = H.countries.map(c => { const cur = this.pick(c, r); if (!cur) return null; const pv = this.prevOf(c, cur.key); return { c, key: cur.key, sc: cur.A.sc, ov: cur.A.ov, pv, d: pv ? cur.A.ov - pv.A.ov : null }; }).filter(Boolean);
+    return { H, r, cs };
+  }
+  async makePptx(scope) {
+    const S = this.state, { H, r, cs } = this.ctx(), role = this.role(), cid = this.cid(cs);
+    const meC = H.countries.find(c => c.id === cid), mp = this.pick(meC, r) || this.pick(meC, 'latest');
+    const me = { sc: mp.A.sc, ov: mp.A.ov, key: mp.key }, pv = this.prevOf(meC, mp.key);
+    const pAvg = H.pillars.map((P, i) => this.mean(cs.map(x => x.sc[i])));
+    const inScope = scope === 'region' ? cs : [{ c: meC, key: mp.key }];
+    const cnt = {}, met = {};
+    inScope.forEach(x => H.pillars.forEach(P => this.qs(x.c, x.key, P.n).forEach(q => { const t = q.yes === 0 ? cnt : q.yes === 1 ? met : null; if (!t) return; t[q.sn] = t[q.sn] || { n: 0, text: q.text, sn: q.sn }; t[q.sn].n++; })));
+    const fmt = (o, tot) => Object.values(o).sort((a, b) => b.n - a.n).map(g => ({ tag: scope === 'region' ? g.n + '/' + tot : g.sn, text: g.text }));
+    let actions = [];
+    const trk = this.tracker();
+    if (scope === 'region') H.pillars.forEach((P, i) => { if (pAvg[i] != null && pAvg[i] < 80) { (H.lib[P.n] || []).forEach(a => actions.push({ text: a, pillar: P.short, w: pAvg[i] })); trk.filter(t => t.p === P.n && /^(AI|Library)/.test(t.src)).forEach(t => actions.push({ text: t.a, pillar: P.short, w: pAvg[i] })); } });
+    else H.pillars.forEach((P, i) => { const v = me.sc[i]; if (v == null || v >= 80) return; this.reportActions(meC, P.n).forEach(a => actions.push({ text: a.text, pillar: P.short, w: v })); trk.filter(t => t.c === cid && t.p === P.n && /^(AI|Library)/.test(t.src)).forEach(t => actions.push({ text: t.a, pillar: P.short, w: v })); });
+    const seen = new Set(); actions = actions.sort((a, b) => a.w - b.w).filter(a => { const k = a.text.toLowerCase().slice(0, 60); if (seen.has(k)) return false; seen.add(k); return true; });
+    const trs = trk.filter(t => scope === 'region' || t.c === cid);
+    const tracker = { done: 0, progress: 0, todo: 0, blocked: 0 }; trs.forEach(t => tracker[t.st]++);
+    const byP = H.pillars.map(P => { const l = trs.filter(t => t.p === P.n); return { pillar: P.short, n: l.length, done: l.filter(t => t.st === 'done').length }; }).filter(x => x.n);
+    const regDeltas = cs.map(x => x.d).filter(d => d != null);
+    const payload = { scope, hazardName: H.name, scopeName: scope === 'region' ? 'WHO African Region' : meC.name, round: scope === 'region' ? r : me.key, isDemo: false,
+      roundLabel: scope === 'region' ? (r === 'latest' ? 'Latest assessment per country' : r + ' round') : 'Assessment ' + me.key, prevLabel: scope === 'region' ? 'previous assessment' : (pv ? pv.key : 'previous'), date: new Date().toISOString().slice(0, 10),
+      pillars: H.pillars.map(P => P.name), short: H.pillars.map(P => P.short), countries: cs.map(x => ({ name: x.c.name, sc: x.sc, ov: x.ov })), me, pAvg, regionAvg: this.mean(cs.map(x => x.ov)),
+      delta: scope === 'region' ? (regDeltas.length ? this.mean(regDeltas) : null) : (pv ? me.ov - pv.A.ov : null),
+      gaps: fmt(cnt, inScope.length), met: fmt(met, inScope.length), actions, tracker, trackerByPillar: byP };
+    if (scope !== 'region') { const ck = this.cmpKeys(meC, mp.key); if (ck.fromK) { const A0 = meC.a[ck.fromK], A1 = meC.a[ck.toK]; payload.cmp = { fromKey: ck.fromK, toKey: ck.toK, fromOv: A0.ov, toOv: A1.ov, rows: H.pillars.map((P, i) => ({ label: P.num + ' · ' + P.name, a: A0.sc[i], b: A1.sc[i] })).sort((x, y) => (y.a ?? -1) - (x.a ?? -1)) }; } }
+    this.setState({ pptBusy: true, pptMsg: 'Building presentation…', pptErr: false });
+    try { const f = await window.PDX_PPTX.build(payload); this.setState({ pptBusy: false, pptMsg: 'Downloaded ' + f }); }
+    catch (e) { this.setState({ pptBusy: false, pptErr: true, pptMsg: 'Could not build the presentation: ' + (e.message || e) }); }
+  }
+  cmpKeys(c, ownKey) {
+    const ks = this.keys(c), cst = (this.state.cmp || {})[this.hz() + '-' + c.id] || {};
+    const toK = ks.includes(cst.to) ? cst.to : ownKey;
+    let fromK = ks.includes(cst.from) && cst.from !== toK ? cst.from : null;
+    if (!fromK) { const pv = this.prevOf(c, toK); fromK = pv ? pv.key : (ks.find(k => k !== toK) || null); }
+    return { ks, fromK, toK };
+  }
+  cid(cs) { const r = this.role(); if (r !== 'region') return r; const H = this.H(); const want = this.state.country; if (cs.some(x => x.c.id === want)) return want; if (H.countries.some(c => c.id === want) && !cs.length) return want; return cs.length ? cs[0].c.id : H.countries[0].id; }
+  renderVals() {
+    const S = this.state, B = this.B, D = window.PDX_DATA;
+    const tabsDef = [['overview', 'Overview'], ['country', 'Country profile'], ['pillar', 'Pillar analysis'], ['actions', 'Anticipatory actions'], ['tracker', 'Action tracker'], ['evidence', 'Evidence'], ['report', 'Country report']];
+    const base = {
+      tabs: tabsDef.map(([id, label]) => ({ label, onClick: () => this.set({ tab: id }), color: S.tab === id ? 'var(--color-text)' : 'var(--color-neutral-700)', border: S.tab === id ? 'var(--color-accent)' : 'transparent' })),
+      isOverview: S.tab === 'overview', isCountry: S.tab === 'country', isPillar: S.tab === 'pillar', isActions: S.tab === 'actions', isTracker: S.tab === 'tracker', isEvidence: S.tab === 'evidence', isReport: S.tab === 'report', isDemo: false, isRegion: true
+    };
+    if (!D || !S.trackers) return base;
+    const hzId = this.hz(), { H, r, cs } = this.ctx(), role = this.role(), isRegion = role === 'region';
+    const maskPeers = this.props.maskPeers ?? true;
+    const cid = this.cid(cs), ownC = H.countries.find(c => c.id === cid);
+    const ownPick = this.pick(ownC, r) || this.pick(ownC, 'latest');
+    const ownKey = ownPick.key, ownA = ownPick.A, ownPrev = this.prevOf(ownC, ownKey);
+    const ownInRound = cs.some(x => x.c.id === cid);
+    const me = { c: ownC, key: ownKey, sc: ownA.sc, ov: ownA.ov, pv: ownPrev, d: ownPrev ? ownA.ov - ownPrev.A.ov : null };
+    const nP = H.pillars.length;
+    cs.forEach(x => { x.masked = !isRegion && maskPeers && x.c.id !== cid; });
+    const nameOf = x => x.masked ? 'Member State' : x.c.name;
+    const regionAvg = this.mean(cs.map(x => x.ov));
+    const pAvg = H.pillars.map((P, i) => this.mean(cs.map(x => x.sc[i])));
+    const isLatest = r === 'latest';
+    const roundLabel = isLatest ? 'Latest assessment per country' : r + ' round';
+    const deltaHead = 'Change vs previous';
+    const periodSpan = H.rounds[0] + '–' + H.rounds[H.rounds.length - 1];
+
+    const mt = S.mapPillar && +S.mapPillar <= nP ? +S.mapPillar : 0;
+    const metric = x => mt ? x.sc[mt - 1] : x.ov;
+    const bandsCount = arr => ['adequate', 'moderate', 'limited'].map(b => ({ label: B[b].label, fill: B[b].fill, n: arr.filter(s => this.band(s) === b).length }));
+    const trk = this.tracker();
+    const trScope = trk.filter(t => isRegion || t.c === cid);
+    const doneN = trScope.filter(t => t.st === 'done').length;
+    const k1v = isRegion ? regionAvg : me.ov;
+    const regD = cs.map(x => x.d).filter(d => d != null);
+    const kd = this.delta(isRegion ? (regD.length ? this.mean(regD) : null) : me.d);
+    const k1 = { label: isRegion ? 'Regional readiness' : ownC.name + ' readiness', value: this.pct(k1v), band: B[this.band(k1v)].label, tint: B[this.band(k1v)].tint, ink: B[this.band(k1v)].ink, delta: kd.txt === '—' ? '' : kd.txt + (isRegion ? ' avg change' : ' vs ' + ownPrev.key), deltaColor: kd.color };
+    const k2 = isRegion ? { label: 'Countries by overall capacity', segs: bandsCount(cs.map(x => x.ov)) } : { label: 'Your pillars by capacity', segs: bandsCount(me.sc) };
+    const src = isRegion ? pAvg : me.sc; let wi = 0; src.forEach((s, i) => { if (s != null && (src[wi] == null || s < src[wi])) wi = i; });
+    const k3 = { label: isRegion ? 'Weakest pillar regionally' : 'Your weakest pillar', value: H.pillars[wi].name, sub: this.pct(src[wi]) + (isRegion ? ' regional average' : ' · regional average ' + this.pct(pAvg[wi])) };
+    const k4 = { label: 'Priority actions implemented', value: String(doneN), sub: 'of ' + trScope.length + ' tracked', width: (trScope.length ? Math.round(100 * doneN / trScope.length) : 0) + '%' };
+
+    const mapVals = {}, metricName = mt ? H.pillars[mt - 1].name : 'Overall readiness';
+    cs.forEach(x => {
+      if (!x.c.iso) return;
+      if (x.masked) { mapVals[x.c.iso] = { fill: '#c9c9cd', name: 'Member State', note: 'Anonymised in the country view', noclick: true }; return; }
+      const s = metric(x), b = B[this.band(s)], ps = x.pv ? (mt ? x.pv.A.sc[mt - 1] : x.pv.A.ov) : null, dd = this.delta(ps == null || s == null ? null : s - ps);
+      mapVals[x.c.iso] = { fill: b.fill, label: x.c.code, value: this.pct(s), name: x.c.name, band: b.label, metric: metricName + ' · ' + x.key, sub: x.pv ? dd.txt + ' pts vs ' + x.pv.key + ' (' + this.pct(ps) + ')' : 'First assessment on record' };
+    });
+    const legend = ['adequate', 'moderate', 'limited', 'na'].map(b => ({ label: b === 'na' ? 'Not assessed in this view' : B[b].label + (b === 'adequate' ? ' ≥80%' : b === 'moderate' ? ' 50–79%' : ' <50%'), fill: B[b].fill, tint: B[b].tint }));
+    const focusId = S.mapFocus === 'none' ? null : (S.mapFocus || (isRegion ? null : cid));
+    const fx = cs.find(x => x.c.id === focusId && !x.masked);
+    const mp = fx ? (() => { const b = B[this.band(fx.ov)], dd = this.delta(fx.d); return {
+      has: true, none: false, name: fx.c.name + ' · ' + fx.key, ovTxt: this.pct(fx.ov), band: b.label, tint: b.tint, ink: b.ink, deltaTxt: fx.pv ? dd.txt + ' vs ' + fx.pv.key : 'First assessment', deltaColor: dd.color,
+      pillars: H.pillars.map((P, i) => { const s = fx.sc[i], pb = B[this.band(s)]; return { short: P.short, name: P.name, txt: this.pct(s), width: (s || 0) + '%', fill: pb.fill, bg: mt === P.n ? 'var(--color-accent-100)' : 'transparent', weight: mt === P.n ? 600 : 400, onClick: () => this.set({ country: fx.c.id, pillar: P.n, tab: 'pillar' }) }; }),
+      onClear: () => this.setState({ mapFocus: 'none' }), onOpen: () => this.set({ country: fx.c.id, tab: 'country' }), onActions: () => this.set({ country: fx.c.id, tab: 'actions' })
+    }; })() : { has: false, none: true, metric: metricName + ' · ranked',
+      list: cs.map(x => { const s = metric(x), b = B[this.band(s)]; return { name: nameOf(x) + (isLatest && !x.masked ? ' · ' + x.key : ''), score: s, scoreTxt: this.pct(s), width: (s || 0) + '%', fill: b.fill, nameInk: x.masked ? 'var(--color-neutral-600)' : 'var(--color-text)', cursor: x.masked ? 'default' : 'pointer', onClick: x.masked ? null : () => this.setState({ mapFocus: x.c.id }) }; }).sort((a, b) => (b.score ?? -1) - (a.score ?? -1)) };
+
+    const cell = (x, i) => { const s = x.sc[i], b = B[this.band(s)]; return { txt: s == null ? '—' : s, bg: b.tint, ink: b.ink, tip: nameOf(x) + ' · ' + H.pillars[i].name + ' (' + x.key + '): ' + this.pct(s), cursor: x.masked ? 'default' : 'pointer', onClick: x.masked ? null : () => this.set({ country: x.c.id, pillar: i + 1, tab: 'pillar' }) }; };
+    const matrix = [...cs].sort((a, b) => b.ov - a.ov).map(x => { const b = B[this.band(x.ov)], dd = this.delta(x.d); return { name: nameOf(x) + (isLatest && !x.masked ? ' · ' + x.key : ''), nameInk: x.masked ? 'var(--color-neutral-600)' : 'var(--color-text)', cells: H.pillars.map((P, i) => cell(x, i)), ovTxt: this.pct(x.ov), ovBg: b.tint, ovInk: b.ink, deltaTxt: dd.txt, deltaColor: dd.color }; });
+    const gapCount = {};
+    cs.forEach(x => H.pillars.forEach(P => this.qs(x.c, x.key, P.n).forEach(q => { if (q.yes === 0) { gapCount[q.sn] = gapCount[q.sn] || { n: 0, sn: q.sn, text: q.text, pillar: P.short }; gapCount[q.sn].n++; } })));
+    const topGaps = Object.values(gapCount).sort((a, b) => b.n - a.n).slice(0, 8).map(g => ({ ...g, n: g.n + '/' + cs.length }));
+
+    const evAll = this.evid(), evMine = evAll.filter(e => e.c === cid), evOk = evMine.filter(e => e.st === 'verified').length;
+    const hist = this.keys(ownC).map(k => k + ' ' + this.pct(ownC.a[k].ov)).join(' → ');
+    const cp = {
+      name: ownC.name,
+      intro: ownC.name + ' has ' + this.keys(ownC).length + ' national ' + H.name.toLowerCase() + ' readiness assessment' + (this.keys(ownC).length > 1 ? 's' : '') + ' on record. Showing the ' + ownKey + ' assessment' + (ownPrev ? ', compared with ' + ownPrev.key : '') + (!ownInRound ? ' (no assessment in the selected round, so the latest is shown)' : '') + '.',
+      history: 'History: ' + hist,
+      ovTxt: this.pct(me.ov), band: B[this.band(me.ov)].label, tint: B[this.band(me.ov)].tint, ink: B[this.band(me.ov)].ink,
+      deltaTxt: this.delta(me.d).txt, deltaColor: this.delta(me.d).color,
+      bandCounts: bandsCount(me.sc), evTxt: evMine.length ? Math.round(100 * evOk / evMine.length) + '%' : '—', evSub: evOk + ' of ' + evMine.length + ' evidence items verified',
+      pillars: H.pillars.map((P, i) => { const s = me.sc[i], ps = ownPrev ? ownPrev.A.sc[i] : null, b = B[this.band(s)], dd = this.delta(s == null || ps == null ? null : s - ps); return { num: P.num, name: P.name, scoreTxt: this.pct(s), width: (s || 0) + '%', fill: b.fill, prevLeft: (ps || 0) + '%', prevOp: ps == null ? 0 : 0.8, deltaTxt: dd.txt, deltaColor: dd.color, band: b.label, tint: b.tint, ink: b.ink, onClick: () => this.set({ pillar: P.n, tab: 'pillar' }) }; })
+    };
+
+    const pn = Math.min(Math.max(1, S.pillar || 1), nP), PP = H.pillars[pn - 1], ps = me.sc[pn - 1], pb = B[this.band(ps)];
+    const myQs = this.qs(ownC, ownKey, pn);
+    const evFor = sn => evAll.find(e => e.c === cid && e.q === sn && e.round === ownKey);
+    const barRow = (x, s) => { const b = B[this.band(s)]; return { name: nameOf(x), score: s, scoreTxt: this.pct(s), width: (s || 0) + '%', fill: b.fill, onClick: x.masked ? null : () => this.set({ country: x.c.id }), cursor: x.masked ? 'default' : 'pointer', rowBg: x.c.id === cid ? 'var(--color-accent-100)' : 'transparent', nameInk: x.masked ? 'var(--color-neutral-600)' : 'var(--color-text)' }; };
+    const pa = {
+      num: PP.num, name: PP.name, country: ownC.name + ' · ' + ownKey, scoreTxt: this.pct(ps), band: pb.label, tint: pb.tint, ink: pb.ink, empty: myQs.every(q => q.yes == null),
+      yes: myQs.filter(q => q.yes === 1).map(q => { const e = evFor(q.sn), m = e ? this.EV[e.st] : null; return { sn: q.sn, text: q.text, ev: e ? 'Evidence · ' + m.label.toLowerCase() : 'Self-reported', evBorder: m ? m.ink : 'var(--color-divider)', evInk: m ? m.ink : 'var(--color-neutral-600)' }; }),
+      no: myQs.filter(q => q.yes === 0).map(q => ({ sn: q.sn, text: q.text })),
+      regionRows: cs.map(x => barRow(x, x.sc[pn - 1])).sort((a, b) => (b.score ?? -1) - (a.score ?? -1)),
+      codes: cs.map(x => x.c.code),
+      matrix: (H.questions[pn] || []).map(q => { let y = 0; const cells = cs.map(x => { const v = x.c.a[x.key].ans[q[0]]; if (v === 1) y++; return { fill: v === 1 ? B.adequate.fill : v === 0 ? B.limited.fill : B.na.fill, tip: nameOf(x) + ' (' + x.key + '): ' + (v === 1 ? 'Yes' : v === 0 ? 'No' : 'No response') }; }); return { sn: q[0], text: q[1], cells, yesTxt: y + '/' + cs.length }; })
+    };
+    pa.yesN = pa.yes.length; pa.noN = pa.no.length; pa.hasGaps = pa.noN > 0;
+
+    const isTracked = t => trk.some(x => x.c === cid && x.a === t);
+    const cards = H.pillars.map((P, i) => ({ P, s: me.sc[i] })).filter(o => o.s != null && o.s < 80).sort((a, b) => a.s - b.s).map(({ P, s }) => {
+      const b = B[this.band(s)], gaps = this.qs(ownC, ownKey, P.n).filter(q => q.yes === 0);
+      const rep = this.reportActions(ownC, P.n), key = hzId + '-' + cid + '-' + P.n, ai = S.ai[key] || { items: [] };
+      const all = [...rep, ...ai.items.map(i => ({ text: i.t, src: i.src }))];
+      return {
+        num: P.num, name: P.name, scoreTxt: this.pct(s), band: b.label, tint: b.tint, ink: b.ink, gaps, gapN: gaps.length,
+        actions: all.map(a => ({ text: a.text, src: a.src, srcBg: a.src === 'AI draft' ? 'var(--color-accent-900)' : a.src === 'Library suggestion' ? 'var(--color-accent-100)' : 'var(--color-neutral-200)', srcInk: a.src === 'AI draft' ? '#f2f2f3' : a.src === 'Library suggestion' ? 'var(--color-accent-800)' : 'var(--color-neutral-800)', tracked: isTracked(a.text), btn: isTracked(a.text) ? 'In tracker' : 'Add to tracker', onAdd: () => this.addTrack(ownC, P.n, a.text, a.src) })),
+        noActions: all.length === 0, loading: !!ai.loading,
+        genLabel: ai.loading ? 'Generating…' : ai.items.length ? 'Generate more' : 'Generate actions with AI',
+        aiNote: ai.error ? ai.error : ai.note ? ai.note : ai.items.length ? ai.items.length + ' drafts. Review before adopting.' : 'Drafted from the unmet criteria',
+        onGen: () => this.gen(ownC, P.n, s, gaps, rep.map(a => a.text))
+      };
+    });
+    const act = { country: ownC.name + ' · ' + ownKey, cards, none: cards.length === 0, summary: cards.length + ' pillars below Adequate · ' + cards.reduce((n, c) => n + c.gapN, 0) + ' unmet criteria' };
+
+    const trC = isRegion ? (S.tCountry === 'all' ? trk : trk.filter(t => t.c === S.tCountry)) : trk.filter(t => t.c === cid);
+    const today = new Date().toISOString().slice(0, 10);
+    const trRows = trC.filter(t => S.tFilter === 'all' || t.st === S.tFilter).sort((a, b) => a.p - b.p).map(t => { const m = this.ST[t.st], late = t.due && t.due < today && t.st !== 'done'; return { action: t.a, country: (H.countries.find(c => c.id === t.c) || {}).name, pillar: (H.pillars[t.p - 1] || {}).short, owner: t.owner, due: t.due ? t.due + (late ? ' · overdue' : '') : '—', dueInk: late ? 'oklch(0.48 0.14 28)' : 'var(--color-text)', src: t.src, st: t.st, tint: m.tint, ink: m.ink, onStatus: e => this.setStatus(t.id, e.target.value) }; });
+    const tr = {
+      stats: ['done', 'progress', 'todo', 'blocked'].map(k => ({ label: this.ST[k].label, ink: this.ST[k].ink, n: trC.filter(t => t.st === k).length, bg: S.tFilter === k ? 'var(--color-neutral-200)' : 'transparent', onClick: () => this.setState({ tFilter: S.tFilter === k ? 'all' : k }) })),
+      rows: trRows, filtered: S.tFilter !== 'all', empty: trC.length === 0,
+      caption: trRows.length + ' actions' + (S.tFilter !== 'all' ? ' · ' + this.ST[S.tFilter].label.toLowerCase() : '')
+    };
+
+    const order = ['missing', 'rejected', 'pending', 'verified'];
+    const evRows = evAll.map((e, i) => ({ e, i })).filter(o => o.e.c === cid).sort((a, b) => order.indexOf(a.e.st) - order.indexOf(b.e.st)).map(({ e, i }) => {
+      const q = (H.questions[e.p] || []).find(x => x[0] === e.q) || ['', '']; const m = this.EV[e.st];
+      return { sn: e.q, text: q[1], pillar: H.pillars[e.p - 1].short, file: e.file || '—', date: e.up ? 'Uploaded ' + e.up : '', stLabel: m.label, tint: m.tint, ink: m.ink,
+        canUpload: e.st === 'missing' || e.st === 'rejected' || (!isRegion && e.st === 'pending'), upLabel: e.file ? 'Replace' : 'Upload', canReview: isRegion && e.st === 'pending',
+        onUpload: () => { this._evIdx = i; this.fileRef.current && this.fileRef.current.click(); },
+        onVerify: () => this.setEv(i, { st: 'verified' }), onReject: () => this.setEv(i, { st: 'rejected' }) };
+    });
+    const evLast = evMine.length ? evMine[0].round : this.keys(ownC).pop();
+    const ev = { country: ownC.name, rows: evRows, stats: [['Reported capacities', evMine.length, 'var(--color-neutral-700)'], ['Verified', evOk, this.EV.verified.ink], ['Pending review', evMine.filter(e => e.st === 'pending').length, this.EV.pending.ink], ['Missing or rejected', evMine.filter(e => e.st === 'missing' || e.st === 'rejected').length, this.EV.missing.ink]].map(([label, n, ink]) => ({ label, n, ink })) };
+
+    const ck = this.cmpKeys(ownC, ownKey), cmpId = hzId + '-' + cid;
+    const setCmp = (k, v) => this.setState(s => ({ cmp: { ...s.cmp, [cmpId]: { from: ck.fromK, to: ck.toK, ...((s.cmp || {})[cmpId] || {}), [k]: v } } }));
+    let cmp = { has: false, single: true };
+    if (ck.fromK) {
+      const A0 = ownC.a[ck.fromK], A1 = ownC.a[ck.toK], d = A1.ov - A0.ov;
+      const G = { ink: 'oklch(0.38 0.08 155)', bg: 'oklch(0.95 0.03 155)' }, Rd = { ink: 'oklch(0.45 0.13 28)', bg: 'oklch(0.95 0.03 28)' }, Nn = { ink: 'var(--color-neutral-700)', bg: 'transparent' };
+      const rows = H.pillars.map((P, i) => { const a = A0.sc[i], b = A1.sc[i], dd = a == null || b == null ? null : b - a; return { num: P.num, name: P.name, a, b, dd, aTxt: this.pct(a), bTxt: this.pct(b), aW: (a || 0) + '%', bW: (b || 0) + '%', dTxt: dd == null ? '—' : (dd > 0 ? '+' + dd + ' ▲' : dd < 0 ? dd + ' ▼' : '0'), dInk: dd > 0 ? G.ink : dd < 0 ? Rd.ink : Nn.ink, onClick: () => this.set({ pillar: P.n, tab: 'pillar' }) }; }).sort((x, y) => (y.a ?? -1) - (x.a ?? -1));
+      const T = d > 0 ? G : d < 0 ? Rd : Nn;
+      cmp = { has: true, single: false, fromK: ck.fromK, toK: ck.toK, fromOv: this.pct(A0.ov), toOv: this.pct(A1.ov), dTxt: (d > 0 ? '+' : '') + d + ' pts' + (d > 0 ? ' ▲' : d < 0 ? ' ▼' : ''), dInk: T.ink, dBg: T.bg, rows,
+        up: rows.filter(r => r.dd > 0).length, down: rows.filter(r => r.dd < 0).length, same: rows.filter(r => r.dd === 0).length,
+        fromOpts: ck.ks.filter(k => k !== ck.toK).map(k => ({ value: k, label: k })), toOpts: ck.ks.filter(k => k !== ck.fromK).map(k => ({ value: k, label: k })),
+        onFrom: e => setCmp('from', e.target.value), onTo: e => setCmp('to', e.target.value) };
+    }
+    const isDetailed = S.reportType === 'detailed';
+    const yn = v => v === 1 ? 'Yes' : v === 0 ? 'No' : 'No response';
+    const totalQ = H.pillars.reduce((n, P) => n + (H.questions[P.n] || []).length, 0);
+    const totalYes = H.pillars.reduce((n, P) => n + (H.questions[P.n] || []).filter(q => ownA.ans[q[0]] === 1).length, 0);
+    const detail = isDetailed ? H.pillars.map((P, i) => {
+      const qs = (H.questions[P.n] || []).map(q => { const v = ownA.ans[q[0]], pv = ownPrev ? ownPrev.A.ans[q[0]] : null, changed = ownPrev && pv != null && v != null && pv !== v;
+        return { sn: q[0], text: q[1], resp: yn(v), rBg: v === 1 ? B.adequate.tint : v === 0 ? B.limited.tint : B.na.tint, rInk: v === 1 ? B.adequate.ink : v === 0 ? B.limited.ink : B.na.ink, prev: ownPrev ? (pv == null ? '—' : yn(pv)) : '', ch: changed ? (v === 1 ? 'Newly met' : 'No longer met') : '', chInk: v === 1 ? B.adequate.ink : B.limited.ink }; });
+      const met = qs.filter(q => q.resp === 'Yes').length, b = B[this.band(me.sc[i])];
+      return { title: P.num + ' · ' + P.name, meta: met + ' of ' + qs.length + ' criteria met · ' + this.pct(me.sc[i]), band: b.label, tint: b.tint, ink: b.ink, qs };
+    }) : [];
+    const bc = bandsCount(me.sc);
+    const rp = {
+      country: ownC.name, intro: cp.intro + ' ' + cp.history + '.', ovTxt: this.pct(me.ov), band: B[this.band(me.ov)].label,
+      subtitle: isDetailed ? 'Detailed country assessment report: results, follow-up actions and all submitted responses' : 'Readiness assessment results and proposed follow-up actions',
+      deltaHead: ownPrev ? 'Δ vs ' + ownPrev.key : 'Change', detail, hasPrev: !!ownPrev, prevHead: ownPrev ? ownPrev.key : '', curHead: ownKey + ' response',
+      annexIntro: 'All ' + totalQ + ' readiness criteria in the ' + H.name.toLowerCase() + ' questionnaire, with the Yes/No responses ' + ownC.name + ' submitted in the ' + ownKey + ' assessment (' + totalYes + ' met). These responses are the basis of every score in this report.' + (ownPrev ? ' The ' + ownPrev.key + ' column shows the previous response so changes can be reviewed.' : '') + ' Source: national readiness assessment submissions (ODK).',
+      counts: bc.map(b => b.n + ' ' + b.label.toLowerCase()).join(' · '),
+      strip: H.pillars.map((P, i) => { const b = B[this.band(me.sc[i])]; return { short: P.short, txt: this.pct(me.sc[i]), tint: b.tint, ink: b.ink }; }),
+      rows: H.pillars.map((P, i) => {
+        const s = me.sc[i], b = B[this.band(s)];
+        let acts = s == null ? ['Not assessed in this round'] : s >= 80 ? ['Sustain current capacity', 'Conduct regular simulation exercises'] : this.reportActions(ownC, P.n).map(a => a.text);
+        const extra = trk.filter(t => t.c === cid && t.p === P.n && /^(AI|Library)/.test(t.src)).map(t => t.a);
+        acts = [...acts, ...extra]; if (!acts.length) acts = ['Actions to be defined with the country team (see unmet criteria in the dashboard)'];
+        const ps = ownPrev ? ownPrev.A.sc[i] : null, dd = s == null || ps == null ? null : s - ps;
+        return { num: P.num, name: P.name, scoreTxt: this.pct(s), band: b.label, tint: b.tint, ink: b.ink, actions: acts, dTxt: dd == null ? '—' : (dd > 0 ? '+' : '') + dd, dInk: dd > 0 ? 'oklch(0.38 0.08 155)' : dd < 0 ? 'oklch(0.45 0.13 28)' : 'var(--color-neutral-700)' };
+      })
+    };
+
+    const roundOpts = [{ value: 'latest', label: 'Latest per country (' + periodSpan + ')' }].concat([...H.rounds].reverse().map(k => ({ value: k, label: k + ' · ' + H.countries.filter(c => c.a[k]).length + ' countries' })));
+    const pickList = (isRegion ? H.countries : [ownC]).map(c => ({ value: c.id, label: c.name + (c.a[ownKey] || !cs.some(x => x.c.id === c.id) ? '' : '') + (cs.some(x => x.c.id === c.id) ? '' : ' (not in this round)') }));
+    return {
+      ...base, isRegion, hazardName: H.name,
+      hazards: Object.values(D).map(h => ({ name: h.name, onClick: () => this.set({ hazard: h.id, round: 'latest', mapFocus: null, pillar: 1 }), bg: h.id === hzId ? '#f2f2f3' : 'transparent', ink: h.id === hzId ? 'var(--color-accent-900)' : '#f2f2f3', border: h.id === hzId ? '#f2f2f3' : 'var(--color-accent-700)' })),
+      round: r, onRound: e => this.set({ round: e.target.value, mapFocus: null }), roundOpts,
+      roleKey: role, onRole: e => this.set({ role: e.target.value, mapFocus: null }),
+      roleCountryOpts: H.countries.map(c => ({ value: c.id, label: 'Country focal point · ' + c.name })),
+      srcTag: H.name + ' · reported data', srcText: 'Source: ' + H.source + '. National level.', srcNote: (isLatest ? 'Each country shows its most recent assessment.' : cs.length + ' countries assessed in ' + r + '.') + (window.PDX_META && window.PDX_META.generated ? ' Data built ' + window.PDX_META.generated.slice(0, 10) + '.' : ''),
+      roundLabel, deltaHead,
+      reportedTxt: cs.length + ' of 47 Member States' + (isLatest ? ' assessed ' + periodSpan : ''),
+      overviewTitle: isRegion ? H.name + ' preparedness and readiness across the region' : ownC.name + ' in the regional picture',
+      k1, k2, k3, k4,
+      mapPillar: String(mt), onMapPillar: e => this.setState({ mapPillar: +e.target.value }),
+      pillarOpts: H.pillars.map(P => ({ value: String(P.n), label: P.num + ' · ' + P.name })),
+      mapJson: JSON.stringify(mapVals), mapSel: fx && fx.c.iso ? fx.c.iso : '', legend, mp,
+      pillarHeads: H.pillars.map(P => ({ num: P.num, short: P.short, name: P.name })),
+      matrix, matrixAvg: pAvg.map(s => ({ txt: s == null ? '—' : s, ink: B[this.band(s)].ink })), regionAvgTxt: this.pct(regionAvg), topGaps,
+      showCountryPicker: isRegion && ['country', 'pillar', 'actions', 'evidence', 'report'].includes(S.tab),
+      countryVal: cid, onCountry: e => this.set({ country: e.target.value }), countryPickOpts: pickList,
+      countryPickNote: ownInRound ? 'Assessment ' + ownKey : 'Not assessed in ' + r + '. Showing latest (' + ownKey + ')',
+      countryOpts: H.countries.map(c => ({ value: c.id, label: c.name })),
+      cp, prevMarkerNote: ownPrev ? ownPrev.key + ' score' : 'No previous assessment',
+      goActions: () => this.set({ tab: 'actions' }), goReport: () => this.set({ tab: 'report' }), goEvidence: () => this.set({ tab: 'evidence' }),
+      pa, pillarChips: H.pillars.map(P => ({ num: P.num, short: P.short, name: P.name, onClick: () => this.set({ pillar: P.n }), bg: P.n === pn ? 'var(--color-text)' : 'transparent', ink: P.n === pn ? '#f2f2f3' : 'var(--color-text)', border: P.n === pn ? 'var(--color-text)' : 'var(--color-divider)' })),
+      aiMode: (window.claude && window.claude.complete) ? 'Live AI connected' : S.apiKey ? 'Live AI connected (your API key)' : 'Offline mode: suggestions from the action library and unmet criteria',
+      aiNeedsKey: !(window.claude && window.claude.complete), aiHasKey: !!S.apiKey, keyDraft: S.keyDraft,
+      onKeyDraft: e => this.setState({ keyDraft: e.target.value }),
+      saveKey: () => { const k = (this.state.keyDraft || '').trim(); try { localStorage.setItem('pdx-anthropic-key', k); } catch (e) {} this.setState({ apiKey: k, keyDraft: '' }); },
+      clearKey: () => { try { localStorage.removeItem('pdx-anthropic-key'); } catch (e) {} this.setState({ apiKey: '' }); },
+      act, tr, tCountry: S.tCountry, onTCountry: e => this.setState({ tCountry: e.target.value }), clearTFilter: () => this.setState({ tFilter: 'all' }),
+      onExport: () => this.exportCsv(trC),
+      ev, evRound: 'assessment ' + evLast, fileRef: this.fileRef,
+      onFile: e => { const f = e.target.files && e.target.files[0]; if (f && this._evIdx != null) this.setEv(this._evIdx, { file: f.name, up: today, st: 'pending' }); e.target.value = ''; },
+      rp, onPrint: () => window.print(), cmp, isDetailed,
+      rtOpts: [['summary', 'Summary report'], ['detailed', 'Detailed report (all responses)']].map(([k, l]) => ({ label: l, onClick: () => this.setState({ reportType: k }), bg: (S.reportType || 'summary') === k ? 'var(--color-text)' : 'transparent', ink: (S.reportType || 'summary') === k ? '#f2f2f3' : 'var(--color-text)' })),
+      rtNote: isDetailed ? 'Adds an annex with all ' + totalQ + ' criteria and the submitted Yes/No responses.' : 'Scores, capacities, gaps and recommended actions.',
+      pdfLabel: isDetailed ? 'Download detailed PDF' : 'Download summary PDF',
+      pptBusy: !!S.pptBusy, pptMsgOn: !!S.pptMsg, pptMsg: S.pptMsg || '', pptMsgInk: S.pptErr ? 'oklch(0.45 0.13 28)' : 'var(--color-neutral-700)',
+      pptCountryLabel: S.pptBusy ? 'Building…' : ownC.name + ' summary (.pptx)',
+      onPptCountry: () => this.makePptx('country'), onPptRegion: () => this.makePptx('region')
+    };
+  }
+}
+</script>
+</body>
+</html>

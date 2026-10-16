@@ -1,0 +1,18 @@
+{
+  "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
+  "name": "question-bank",
+  "title": "Readiness question bank (data/questions/<hazard>.csv)",
+  "description": "One row per questionnaire item. Changing a hazard's questionnaire means editing this file, not code.",
+  "fields": [
+    { "name": "QuestionKey", "type": "string", "constraints": { "required": true, "unique": true }, "description": "ODK question name; join key with submissions." },
+    { "name": "SN", "type": "string", "constraints": { "required": true, "pattern": "^\\d+[a-z]?\\.\\d+$" }, "description": "Display number, e.g. 1.2 or 1a.01." },
+    { "name": "CategoryCode", "type": "string", "constraints": { "required": true }, "description": "Pillar code. Must match a pillars[].code in data/config/hazards.json." },
+    { "name": "Category", "type": "string", "description": "Pillar label as in ODK." },
+    { "name": "AffectsScore", "type": "string", "constraints": { "enum": ["0", "1"] }, "description": "1 = counts towards scores; 0 = informational only." },
+    { "name": "Weight", "type": "number", "description": "Weight used in the overall score (CategoryWeight from the ODK workbook)." },
+    { "name": "Text_en", "type": "string", "constraints": { "required": true } },
+    { "name": "Text_fr", "type": "string" },
+    { "name": "Text_pt", "type": "string" }
+  ],
+  "primaryKey": ["QuestionKey"]
+}

@@ -1,0 +1,389 @@
+[
+  {
+    "id": "angola",
+    "name": "Angola",
+    "iso_numeric": "024",
+    "iso3": "AGO",
+    "aliases": [
+      "ANGOLA"
+    ]
+  },
+  {
+    "id": "benin",
+    "name": "Benin",
+    "iso_numeric": "204",
+    "iso3": "BEN",
+    "aliases": [
+      "Benin"
+    ]
+  },
+  {
+    "id": "botswana",
+    "name": "Botswana",
+    "iso_numeric": "072",
+    "iso3": "BWA",
+    "aliases": [
+      "BOTSWANA"
+    ]
+  },
+  {
+    "id": "burkinafaso",
+    "name": "Burkina Faso",
+    "iso_numeric": "854",
+    "iso3": "BFA",
+    "aliases": [
+      "BURKINA FASO"
+    ]
+  },
+  {
+    "id": "burundi",
+    "name": "Burundi",
+    "iso_numeric": "108",
+    "iso3": "BDI",
+    "aliases": [
+      "BURUNDI"
+    ]
+  },
+  {
+    "id": "capeverde",
+    "name": "Cabo Verde",
+    "iso_numeric": "132",
+    "iso3": "CPV",
+    "aliases": [
+      "CAPE VERDE"
+    ]
+  },
+  {
+    "id": "cameroon",
+    "name": "Cameroon",
+    "iso_numeric": "120",
+    "iso3": "CMR",
+    "aliases": [
+      "CAMEROON"
+    ]
+  },
+  {
+    "id": "centralafricanrepublic",
+    "name": "Central African Rep.",
+    "iso_numeric": "140",
+    "iso3": "CAF",
+    "aliases": [
+      "CENTRAL AFRICAN REPUBLIC"
+    ]
+  },
+  {
+    "id": "chad",
+    "name": "Chad",
+    "iso_numeric": "148",
+    "iso3": "TCD",
+    "aliases": [
+      "CHAD"
+    ]
+  },
+  {
+    "id": "comoros",
+    "name": "Comoros",
+    "iso_numeric": "174",
+    "iso3": "COM",
+    "aliases": [
+      "COMOROS"
+    ]
+  },
+  {
+    "id": "republicofcongo",
+    "name": "Congo",
+    "iso_numeric": "178",
+    "iso3": "COG",
+    "aliases": [
+      "REPUBLIC OF CONGO"
+    ]
+  },
+  {
+    "id": "democraticrepublicofthecongo",
+    "name": "DR Congo",
+    "iso_numeric": "180",
+    "iso3": "COD",
+    "aliases": [
+      "DEMOCRATIC REPUBLIC OF THE CONGO"
+    ]
+  },
+  {
+    "id": "equatorialguinea",
+    "name": "Equatorial Guinea",
+    "iso_numeric": "226",
+    "iso3": "GNQ",
+    "aliases": [
+      "EQUATORIAL GUINEA"
+    ]
+  },
+  {
+    "id": "eritrea",
+    "name": "Eritrea",
+    "iso_numeric": "232",
+    "iso3": "ERI",
+    "aliases": [
+      "ERITREA"
+    ]
+  },
+  {
+    "id": "eswatini",
+    "name": "Eswatini",
+    "iso_numeric": "748",
+    "iso3": "SWZ",
+    "aliases": [
+      "ESWATINI"
+    ]
+  },
+  {
+    "id": "ethiopia",
+    "name": "Ethiopia",
+    "iso_numeric": "231",
+    "iso3": "ETH",
+    "aliases": [
+      "ETHIOPIA"
+    ]
+  },
+  {
+    "id": "gabon",
+    "name": "Gabon",
+    "iso_numeric": "266",
+    "iso3": "GAB",
+    "aliases": [
+      "GABON"
+    ]
+  },
+  {
+    "id": "ghana",
+    "name": "Ghana",
+    "iso_numeric": "288",
+    "iso3": "GHA",
+    "aliases": [
+      "GHANA"
+    ]
+  },
+  {
+    "id": "guinea",
+    "name": "Guinea",
+    "iso_numeric": "324",
+    "iso3": "GIN",
+    "aliases": [
+      "GUINEA"
+    ]
+  },
+  {
+    "id": "guineabissau",
+    "name": "Guinea-Bissau",
+    "iso_numeric": "624",
+    "iso3": "GNB",
+    "aliases": [
+      "GUINEA-BISSAU"
+    ]
+  },
+  {
+    "id": "kenya",
+    "name": "Kenya",
+    "iso_numeric": "404",
+    "iso3": "KEN",
+    "aliases": [
+      "Kenya"
+    ]
+  },
+  {
+    "id": "lesotho",
+    "name": "Lesotho",
+    "iso_numeric": "426",
+    "iso3": "LSO",
+    "aliases": [
+      "LESOTHO"
+    ]
+  },
+  {
+    "id": "madagascar",
+    "name": "Madagascar",
+    "iso_numeric": "450",
+    "iso3": "MDG",
+    "aliases": [
+      "MADAGASCAR"
+    ]
+  },
+  {
+    "id": "malawi",
+    "name": "Malawi",
+    "iso_numeric": "454",
+    "iso3": "MWI",
+    "aliases": [
+      "MALAWI"
+    ]
+  },
+  {
+    "id": "mali",
+    "name": "Mali",
+    "iso_numeric": "466",
+    "iso3": "MLI",
+    "aliases": [
+      "MALI"
+    ]
+  },
+  {
+    "id": "mauritania",
+    "name": "Mauritania",
+    "iso_numeric": "478",
+    "iso3": "MRT",
+    "aliases": [
+      "MAURITANIA"
+    ]
+  },
+  {
+    "id": "mauritius",
+    "name": "Mauritius",
+    "iso_numeric": "480",
+    "iso3": "MUS",
+    "aliases": [
+      "MAURITIUS"
+    ]
+  },
+  {
+    "id": "mozambique",
+    "name": "Mozambique",
+    "iso_numeric": "508",
+    "iso3": "MOZ",
+    "aliases": [
+      "Mozambique"
+    ]
+  },
+  {
+    "id": "namibia",
+    "name": "Namibia",
+    "iso_numeric": "516",
+    "iso3": "NAM",
+    "aliases": [
+      "NAMIBIA"
+    ]
+  },
+  {
+    "id": "niger",
+    "name": "Niger",
+    "iso_numeric": "562",
+    "iso3": "NER",
+    "aliases": [
+      "NIGER"
+    ]
+  },
+  {
+    "id": "nigeria",
+    "name": "Nigeria",
+    "iso_numeric": "566",
+    "iso3": "NGA",
+    "aliases": [
+      "NIGERIA"
+    ]
+  },
+  {
+    "id": "rwanda",
+    "name": "Rwanda",
+    "iso_numeric": "646",
+    "iso3": "RWA",
+    "aliases": [
+      "Rwanda"
+    ]
+  },
+  {
+    "id": "senegal",
+    "name": "Senegal",
+    "iso_numeric": "686",
+    "iso3": "SEN",
+    "aliases": [
+      "SENEGAL"
+    ]
+  },
+  {
+    "id": "seychelles",
+    "name": "Seychelles",
+    "iso_numeric": "690",
+    "iso3": "SYC",
+    "aliases": [
+      "SEYCHELLES"
+    ]
+  },
+  {
+    "id": "sierraleone",
+    "name": "Sierra Leone",
+    "iso_numeric": "694",
+    "iso3": "SLE",
+    "aliases": [
+      "SIERRA LEONE"
+    ]
+  },
+  {
+    "id": "southafrica",
+    "name": "South Africa",
+    "iso_numeric": "710",
+    "iso3": "ZAF",
+    "aliases": [
+      "SOUTH AFRICA"
+    ]
+  },
+  {
+    "id": "southsudan",
+    "name": "South Sudan",
+    "iso_numeric": "728",
+    "iso3": "SSD",
+    "aliases": [
+      "SOUTH SUDAN"
+    ]
+  },
+  {
+    "id": "tanzania",
+    "name": "Tanzania",
+    "iso_numeric": "834",
+    "iso3": "TZA",
+    "aliases": [
+      "TANZANIA"
+    ]
+  },
+  {
+    "id": "togo",
+    "name": "Togo",
+    "iso_numeric": "768",
+    "iso3": "TGO",
+    "aliases": [
+      "Togo"
+    ]
+  },
+  {
+    "id": "uganda",
+    "name": "Uganda",
+    "iso_numeric": "800",
+    "iso3": "UGA",
+    "aliases": [
+      "Uganda"
+    ]
+  },
+  {
+    "id": "zambia",
+    "name": "Zambia",
+    "iso_numeric": "894",
+    "iso3": "ZMB",
+    "aliases": [
+      "ZAMBIA"
+    ]
+  },
+  {
+    "id": "zanzibar",
+    "name": "Zanzibar",
+    "iso_numeric": null,
+    "iso3": "ZNZ",
+    "aliases": [
+      "ZANZIBAR"
+    ]
+  },
+  {
+    "id": "zimbabwe",
+    "name": "Zimbabwe",
+    "iso_numeric": "716",
+    "iso3": "ZWE",
+    "aliases": [
+      "ZIMBABWE"
+    ]
+  }
+]

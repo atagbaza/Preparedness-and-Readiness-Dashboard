@@ -1,0 +1,17 @@
+{
+  "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
+  "name": "odk-readiness-submission",
+  "title": "ODK readiness assessment submission (CSV)",
+  "description": "One row per answered question, per country, per assessment period. Files go in data/submissions/<hazard>/. Extra columns, such as the full ODK export columns, are allowed and ignored.",
+  "fields": [
+    { "name": "Country", "type": "string", "constraints": { "required": true }, "description": "Country name as in ODK. Must match a name or alias in data/config/countries.json (case-insensitive)." },
+    { "name": "AdminLevel", "type": "string", "constraints": { "enum": ["National", "Subnational"] }, "description": "Only 'National' rows are scored at present. Defaults to National if blank." },
+    { "name": "AdminLevelName", "type": "string", "description": "Country or subnational unit name." },
+    { "name": "DataPeriod", "type": "string", "constraints": { "required": true, "pattern": "^\\d{4}(-Q[1-4])?$" }, "description": "Assessment round: YYYY or YYYY-Qn, e.g. 2026-Q4." },
+    { "name": "QuestionKey", "type": "string", "constraints": { "required": true }, "description": "Stable ODK question name. Must exist in data/questions/<hazard>.csv." },
+    { "name": "NationalYN", "type": "string", "constraints": { "required": true, "enum": ["yes", "no", "1", "0", "oui", "non", "sim", "não", ""] }, "description": "Answer. A blank answer is scored as not met and reported as a warning." },
+    { "name": "Comments", "type": "string", "description": "Free text from the respondent (optional)." },
+    { "name": "Source", "type": "string", "description": "Origin, e.g. 'ODK Server' (optional)." }
+  ],
+  "primaryKey": ["Country", "AdminLevel", "DataPeriod", "QuestionKey"]
+}

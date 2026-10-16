@@ -1,0 +1,156 @@
+{
+  "cholera": {
+    "id": "cholera",
+    "name": "Cholera",
+    "source": "National cholera readiness assessments (ODK), 2023–2025",
+    "reportYear": "2024",
+    "pillars": [
+      {
+        "code": "COORD",
+        "num": "01",
+        "short": "Coordination",
+        "name": "Leadership & coordination"
+      },
+      {
+        "code": "RRT",
+        "num": "02",
+        "short": "RRT",
+        "name": "Rapid response teams"
+      },
+      {
+        "code": "SURV",
+        "num": "03",
+        "short": "Surveillance",
+        "name": "Surveillance"
+      },
+      {
+        "code": "LAB",
+        "num": "04",
+        "short": "Laboratory",
+        "name": "Laboratory"
+      },
+      {
+        "code": "POE",
+        "num": "05",
+        "short": "PoE",
+        "name": "Points of entry"
+      },
+      {
+        "code": "CASMAN",
+        "num": "06",
+        "short": "Case mgmt",
+        "name": "Case management"
+      },
+      {
+        "code": "IPC",
+        "num": "07",
+        "short": "IPC/SDB",
+        "name": "IPC & safe dignified burial"
+      },
+      {
+        "code": "RCCE",
+        "num": "08",
+        "short": "RCCE",
+        "name": "Risk comms & community engagement"
+      },
+      {
+        "code": "OSL",
+        "num": "09",
+        "short": "Logistics",
+        "name": "Logistics & procurement"
+      },
+      {
+        "code": "VACC",
+        "num": "10",
+        "short": "Vaccination",
+        "name": "Vaccination (OCV)"
+      },
+      {
+        "code": "WASH",
+        "num": "11",
+        "short": "WASH/Food",
+        "name": "WASH & food safety"
+      },
+      {
+        "code": "CEHS",
+        "num": "12",
+        "short": "Continuity",
+        "name": "Continuity of essential services"
+      }
+    ]
+  },
+  "fvd": {
+    "id": "fvd",
+    "name": "Filovirus",
+    "source": "National filovirus disease (FVD) readiness assessments (ODK), 2023–2025",
+    "reportYear": null,
+    "pillars": [
+      {
+        "code": "01 - Coord",
+        "num": "01",
+        "short": "Coordination",
+        "name": "Coordination & financing"
+      },
+      {
+        "code": "02 - RRT",
+        "num": "02",
+        "short": "RRT",
+        "name": "Rapid response teams"
+      },
+      {
+        "code": "03 - Awareness",
+        "num": "03",
+        "short": "RCCE",
+        "name": "Public awareness & community engagement"
+      },
+      {
+        "code": "04 - IPC",
+        "num": "04",
+        "short": "IPC",
+        "name": "Infection prevention & control"
+      },
+      {
+        "code": "05 - Cas Man",
+        "num": "05",
+        "short": "Case mgmt",
+        "name": "Case management"
+      },
+      {
+        "code": "06 - Surv",
+        "num": "06",
+        "short": "Surveillance",
+        "name": "Surveillance"
+      },
+      {
+        "code": "07 - C. Tracing",
+        "num": "07",
+        "short": "Contact tracing",
+        "name": "Contact tracing"
+      },
+      {
+        "code": "08 - Lab",
+        "num": "08",
+        "short": "Laboratory",
+        "name": "Laboratory"
+      },
+      {
+        "code": "09 - PoE",
+        "num": "09",
+        "short": "PoE",
+        "name": "Travel & points of entry"
+      },
+      {
+        "code": "11 - OSL",
+        "num": "11",
+        "short": "Logistics",
+        "name": "Logistics & operations support"
+      },
+      {
+        "code": "12 - Safe Bur",
+        "num": "12",
+        "short": "SDB",
+        "name": "Safe & dignified burials"
+      }
+    ]
+  }
+}

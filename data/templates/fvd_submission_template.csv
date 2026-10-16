@@ -1,0 +1,136 @@
+Country,AdminLevel,AdminLevelName,DataPeriod,QuestionKey,NationalYN,Comments,Source,_SN,_Question
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_natl_policy_fvd_preparedness,,,ODK Server,1a.01,National policy & legislative frameworks to enable implementation of FVD Preparedness measures are in place
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_emergency_deploy_visa,,,ODK Server,1a.02,Visa clearance for emergency deployment are expediated
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_natl_taskforce_ims_tor,,,ODK Server,1a.03,"Multi-sectoral Taskforce/IMS are activated at the National level with clear ToRs for strategic, operational, tactical levels are developed"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_ims_sops_guidelines,,,ODK Server,1a.04,"Guidelines /SOPS for operations of the strategic, operational, tactical levels are developed"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_eoc_physical_space,,,ODK Server,1a.05,Physical space for the EOC is identified
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_eoc_linked_to_ndms,,,ODK Server,1a.06,EOC is linked to National Disaster Management Structures
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_ims_eoc_flowcharts,,,ODK Server,1a.07,"Flow charts outlining coordination, communication lines within IMS/EOC are developed & disseminated"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_empowered_incident_mgr,,,ODK Server,1a.08,Incident Manager is assigned and empowered to make operational decisions
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_rapid_risk_assessment,,,ODK Server,1a.09,Rapid risk assessment and prioritization of districts & vulnerable population identification was undertaken
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_subnatl_taskforce_ims,,,ODK Server,1a.10,Sub-national level multi-sectoral Taskforce/IMS were established in each high risk district
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_ncp_monitoring_budget,,,ODK Server,1a.11,Approved National Contingency Plan (NCP) for FVD (inc. monitoring mechanism & budget) is updated
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_4w_mapping_update,,,ODK Server,1a.12,Updated list of 4W mapping for donors and partners is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_ncp_donors_share,,,ODK Server,1a.13,NCP & budget was shared with in-country and external donors
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_prep_72_hours,,,ODK Server,1a.14,Operational preparedness & readiness Plan /72 plan hour was developed
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_sitrep_pressrelease,,,ODK Server,1a.15,Sitrep & Press Release templates are available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_crossborder_survdata,,,ODK Server,1a.16,Bilateral cross border mechanism for sharing surveillance data is established between affected & priority countries
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_vhf_drills_assess,,,ODK Server,1a.17,Table top/drills/SIMEX to assess functionality of VHF Preparedness was conducted within the last 6 months
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_emergency_fund_transfer,,,ODK Server,1b.01,Legal framework to enable streamlined emergency fund transfer from central to sub-national level is in place
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_operational_budget,,,ODK Server,1b.02,Operational budget is finalised & approved for pre-epidemic detection and a preliminary response.
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_contingency_funds,,,ODK Server,1b.03,Accessible contingency funds are identified for immediate response to an outbreak
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_compensation_package,,,ODK Server,1b.04,A compensation and benefits package for all high-risk workers covering remuneration and motivation for high-risk assignments and compensation in case of infection or death is available.
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_resource_mobilization,,,ODK Server,1b.05,Resource mobilization plan is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_funding_sources_map,,,ODK Server,1b.06,Domestic and donor funding sources are mapped
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,coord_funding_tracking,,,ODK Server,1b.07,"Mechanism for tracking Funding, resource utilization & financial reporting is available"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_national_trained,,,ODK Server,2.01,Trained multidisciplinary RRT established at the national level with team lead
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_member_roster,,,ODK Server,2.02,RRT members rostered and contact list generated and disseminated
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_standardized_kits,,,ODK Server,2.03,"Standardized kits assembled & supplied including contact details, case definition, case investigation forms, SOP, sample collection, labelling and packaging and PPEs"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_outbreak_template,,,ODK Server,2.04,Outbreak template (IDSR) for initial index case investigation report available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_transport_mechanism,,,ODK Server,2.05,Functional transport mechanism & a designated driver is readily available for deployment of RRTs
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_tor_sops_guidelines,,,ODK Server,2.06,"Clear TORs,Operational guidelines, SOPs for the RRT are developed"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_subnatl_trained,,,ODK Server,2.07,Trained multidisciplinary RRT is established at the sub-national level with team leads
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_subnatl_skills,,,ODK Server,2.08,"Sub-national RRTs are trained in case verification & reporting, filling case investigation forms, IPC, safe sample collection, triple packaging, labelling and transport, initiating contact tracing & RCCE"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_communication_linkage,,,ODK Server,2.09,Communication linkage between alert system & RRT are functional
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rrt_refresher_drills,,,ODK Server,2.10,Bimonthly refresher drills are planned for RRTs in the event of no case
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rcce_natl_strategy_budget,,,ODK Server,3.01,"National Risk Communication & Community Engagement (RCCE ) strategy, workplan, monitoring mechanism and budget was developed"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rcce_natl_coord_mechanism,,,ODK Server,3.02,"National RCCE co-ordination mechanism (PH experts, NGOs, community, CSOs) is established"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rcce_subnatl_coord_mech,,,ODK Server,3.03,Sub-national RCCE coordination mechanisms are established in high risk prefectures/districts
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rcce_networks_influencers,,,ODK Server,3.04,Critical communication networks and key influencers at national and sub-national level are mapped
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rcce_feedback_mechanisms,,,ODK Server,3.05,"Feedback mechanisms for capturing and analysing sources of community perspectives (e.g. KAP surveys, socio-anthropological studies, rumour tracking, local media opinion pieces, social media posts etc) are developed"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rcce_scientific_messages,,,ODK Server,3.06,"Key scientifically informed messages are translated & disseminated to media, HF/CHWs, local government, community leaders, churches, schools, traditional healers and other key community stakeholders."
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rcce_influencers_orient,,,ODK Server,3.07,"Key influencers (local government, politicians, journalists, community/religious leaders, security forces etc.) are orientated at community level"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,rcce_sdb_sensitization,,,ODK Server,3.08,Community sensitization to SDB & decontamination concept & protocol was delivered
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_taskforce_activated,,,ODK Server,4.01,IPC taskforce activated in high risk prefectures/districts
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_sops_revised,,,ODK Server,4.02,"IPC SOPs (inclusive of job aid, flow charts) are revised, approved, and disseminated to all relevant stakeholders"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_assessment_monitoring,,,ODK Server,4.03,IPC assessment and monitoring at HFs/PoEs utilising an IPC checklist implemented
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_infrastructure_functional,,,ODK Server,4.04,"IPC infrastructure (safe water supply, power, sanitation facilities, incinerator) at main HF in high risk prefectures/districts are functionable"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_vhf_kits_prepositioned,,,ODK Server,4.05,"VHF IPC Kits are prepositioned (PPE kits, soap/disinfectant, waste management bins and bags) at HF designated to support isolation in high risk prefectures/districts"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_fhw_hw_chw_trained,,,ODK Server,4.06,FHWs/HWs/CHWs at ETCs/IU and routine HFs are trained in VHF IPC SOPs
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_isolation_units_established,,,ODK Server,4.07,Isolation Units are established at main HFs in all high risk prefectures/districts
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_ring_approach_identified,,,ODK Server,4.08,"Ring-IPC approach identified and relevant team members have been trained, with prepositioned supplies in each high risk district"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_hfs_mapped_categorised,,,ODK Server,4.09,Up-to-date mapping of HFs within high risk prefectures/districts completed and HFs categorised according to risk
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_screening_at_fpoe,,,ODK Server,4.10,"First point of entry to health systems are actively screening patients for VHF using established case definitions, and have run simulation exercises to ensure readiness to action isolation protocols for suspected cases."
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_transfer_of_care_teams_trained,,,ODK Server,4.11,"All teams involved with the transfer of care for suspected/confirmed VHF patients from health facilities to designated isolation centres (e.g. RRT, paramedic) are trained and ready to support and action IPC measures applied at the host and receiving facilities, as well as decontamination of the vehicle following transfer"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ipc_isolation_facilities_staffing_plan,,,ODK Server,4.12,"Isolation facilities have a dedicated staffing plan, including on-site training of staff members on IPC practices, including procedures for donning and doffing of PPE prior to operational use"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_min_etc_constructed,,,ODK Server,5.01,A minimum of one purpose-built/renovated ETC was constructed in a high-risk prefecture/district according to WHO specifications for the management of FVD patients (min. 10 patients)
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_rapid_deployable_tc,,,ODK Server,5.02,One Rapidly Deployable - treatment center in countries with large land mass/long shared borders with affected country or with/accessibility issues is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_sop_revised,,,ODK Server,5.03,"SOP for managing treatment center is revised, approved and disseminated"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_case_mgmt_team,,,ODK Server,5.04,"Case management team is established, trained & mentored by clinicians experienced in FVD patient management & IPC protocol"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_essentials_prepositioned,,,ODK Server,5.05,"Essential medicines & consumables for critical care management (fluids, IV cannulas, giving sets, nutrition supplements, OR sachets) are prepositioned"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_partners_identified,,,ODK Server,5.06,"In countries with limited national case management capacity, partners are identified and are committed to support case management in the event of an outbreak."
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_exp_therapies_approved,,,ODK Server,5.07,"Use of Experimental Therapies protocol IRB, NRA & MEURI is approved for import and use"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_purpose_ambulance,,,ODK Server,5.08,Purpose designed & functional ambulance for transporting suspect cases to ETC is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_ambulance_team_trained,,,ODK Server,5.09,Ambulance team is assigned & trained to transport suspect FVD cases
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_hf_identified,,,ODK Server,5.10,HFs in the high risk prefectures/districts with potential spaces for rapid conversion to ETCs are identified and mapped
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,casman_patient_referral_transport,,,ODK Server,5.11,Patient referral and transport mechanism for HF without TC/IUs at the prefecture/district level is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_vhf_alert_system,,,ODK Server,6.01,VHF alert system integrated with IDSR
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_idsr_adopted,,,ODK Server,6.02,3rd Edition IDSR adopted and rolled out at all levels
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_24_7_hotline,,,ODK Server,6.03,24/7 hotline is available to report alerts.
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_24_7_hotline_staff,,,ODK Server,6.04,"24/7 staff are allocated to the Hotline services and trained on alert processes, reporting protocols and FVD enquiries"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_hw_trained,,,ODK Server,6.05,"HW (HF & community levels) trained in detection (case definition), reporting protocol, suspect patient isolation & mgt./ referral"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_sop_revised,,,ODK Server,6.06,"SOP for EPI/Surveillance (Flowcharts etc) revised, approved & disseminated"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_hcw_trained,,,ODK Server,6.07,"Health careworkers (SOP, case definitions, case detection and reporting ) at all levels (POEs, HF, community, refugee settlements) are trained."
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_event_surveillance,,,ODK Server,6.08,Formal event-based surveillance system is in place
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_reporting_lines_established,,,ODK Server,6.09,Clear lines of reporting for potential FVD cases (dead or alive) is established
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_hr_identified,,,ODK Server,6.10,"Human resources for community surveillance (community HCWs, volunteers, NGOs, traditional healer, community leaders, etc.) are identified."
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_comm_case_definitions,,,ODK Server,6.11,Simplified communty case definitions are disseminated at community level
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,surv_functionality_assessed,,,ODK Server,6.12,Functionality of the surveillance systems for FVD was assessed through SIMEX (drills or field exercises) within the past 6 months
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ctrac_contact_guidelines,,,ODK Server,7.01,Contact tracing guidelines and SOPs revised and disseminated at the national level
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ctrac_data_mgmt_national,,,ODK Server,7.02,Data management system for FVD contact tracing at the national level is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ctrac_team_training,,,ODK Server,7.03,"At least one team at the national level is trained on an MoH approved data management tool (e.g. GoDATA, SORMAS, ODK)"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ctrac_contact_guidelines_subnat,,,ODK Server,7.04,Contact tracing guidelines and SOPs are revised and disseminated at the subnational level.
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ctrac_data_mgmt_subnat,,,ODK Server,7.05,Data management system for FVD contact tracing at the sub-national levels is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ctrac_personnel_list,,,ODK Server,7.06,"List of personnel in-country trained in contact tracing guidelines, SOPS, CT tools is available"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,ctrac_encrypted_data_mgmt,,,ODK Server,7.07,MoH secure & encrypted data management system for aligning contacts is in place
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_nat_test_strat_rt_pcr,,,ODK Server,8.01,National testing strategy based on RT-PCR for filoviruses (Marburgviruses and Ebolaviruses) available and disseminated at the central and sub-national level
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_nat_ref_lab_marburg_ebola,,,ODK Server,8.02,A designated National Reference Laboratory with molecular biology capacity for filoviruses (Marburgviruses and ebolaviruses) diagnosis using RT-PCR is established
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_access_sequencing_capacity,,,ODK Server,8.03,The country has access to sequencing capacity (in country or through international referral)
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_subnat_diag_capacity,,,ODK Server,8.04,"Subnational molecular diagnosis capacity for Marburgvirus using RT-PCR is available in priority prefectures/regions and personnel trained in relevant biosafety procedures, or suitable and reliable transport mechanisms are available from subnational locations to National Reference Laboratory"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_rapid_transp_system,,,ODK Server,8.06,A rapid transportation system and stand-by arrangements and agreements with WHO Collaborating Centres for confirmatory testing are in place
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_trained_iata_personnel,,,ODK Server,8.07,Trained personnel with IATA certification for packaging & shipping suspect samples are available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_sops_spec_collect,,,ODK Server,8.08,"Standard operating procedures (SOPs) for specimen collection, handling transport and testing, data management and data sharing, and specimen storage and archiving, are available and disseminated."
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_trained_health_personnel,,,ODK Server,8.09,"Health personnel, rapid response teams, sample collectors, lab personnel trained on safety procedures and IPC for specimen collection, handling, triple packaging, labelling & transfer are available in priority regions"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_rt_pcr_reagents_avail,,,ODK Server,8.10,RT-PCR reagents such as primers and probes to detect filoviruses and necessary ancillary supplies are available & within the expiry date
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_stock_management_sys,,,ODK Server,8.11,An efficient & functional stock management system is established
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_data_mgmt_coordination,,,ODK Server,8.12,A data management and coordination system is in place for timely dissemination of testing results (for clinical management and public health actions)
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_coord_testing_cap_assessed,,,ODK Server,8.14,Coordination and testing capacities assessed (Simex)
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,lab_surge_plan_avail,,,ODK Server,8.15,"A surge plan to increase testing capacity is available (HR, infrastructure, supplies, coordination)"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_identify_referral_hf,,,ODK Server,9.01,Referral HF is identified for each POE & contact details made available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_transport_mechanism,,,ODK Server,9.02,Functional transport mechanism to refer suspect cases from all POEs to an identified HF is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_trained_port_health,,,ODK Server,9.03,"Port health teams at all designated POEs are trained to screen, identify, assess, report, isolate, apply IPC protocol & refer suspect cases"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_sop_screening,,,ODK Server,9.04,SOP for implementing screening in the event of a confirmed FVD case is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_prepositioned_equipment,,,ODK Server,9.05,"Equipment and IPC supplies (PPE, Infra-red thermometers, cleaning and disinfecting products, observation/isolation facilities) are pre-positioned at all designated POEs"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_data_cross_border_mobility,,,ODK Server,9.06,"Data on cross-border population mobility & mapping of POEs, convergence points, and key routes with the affected areas is available"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_communication_drills,,,ODK Server,9.07,"Drills to review communication systems between PoE health authorities and conveyance operators, and national health surveillance systems was undertaken in past 6 months"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_capacity_assessment,,,ODK Server,9.08,Capacity of PH authorities on roles and processes for handling potential FVD cases was assessed
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_authority_notification,,,ODK Server,9.09,All POE authorities are sensitized and can immediately notify PoE port health staff of suspect FVD cases
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,poe_iec_posted,,,ODK Server,9.10,IEC is available and posted in weather proof material in target areas at all designated PoEs
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_ims_national_operational,,,ODK Server,11.01,The logistics component of the IMS is operational at the national level
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_storage_national_adequate,,,ODK Server,11.02,The country has adequate storage capacity at the national level
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_ims_subnational_operational,,,ODK Server,11.03,The logistics component of the IMS is operational at the subnational levels
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_stockpile_management_high_risk,,,ODK Server,11.04,There is an efficient stockpile management system established in all high risk prefectures/districts
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_vhf500_kit_national,,,ODK Server,11.05,At least 1 VHF500 Kit is stored at National Level
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_vhf_kits_high_risk,,,ODK Server,11.06,A minimum of 30 kits are pre-positioned in each of the high risk prefectures/districts
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_vhf_ambulance_min1,,,ODK Server,11.07,Transportation ; There is a minimum of 1 VHF allocated ambulance in-country for transferring a suspect/confirmed patient
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_sample_transport_reliable,,,ODK Server,11.08,Transportation: Sample collection transport mechanism from point of origin to reference lab is reliable and operational at national and international levels
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_rd_etu_central_stored,,,ODK Server,11.09,"1 rapidly deployable ETU, furniture, fixtures & fittings is stored at central level"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_rd_etu_transport_available,,,ODK Server,11.10,Functional transport mechanism & trained operators to deploy & assemble RD-ETU are available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_logistician_min1,,,ODK Server,11.11,Minimum of one logistician is in country to support the MoH
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_logistics_mapping_in_country,,,ODK Server,11.12,Mapping of logistical resources in-country was undertaken
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_suppliers_identified_standard_items,,,ODK Server,11.13,Suppliers of standard essential items for emergency response are identified locally/ internationally.
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_suppliers_capacity,,,ODK Server,11.14,Delivery capacity/time of identified suppliers assessed and possibilities for pre-supply agreements were explored
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_suppliers_local_essential_items,,,ODK Server,11.15,"Suppliers; Local suppliers for standard essential items for emergency response (e.g. WASH items, gum boots) are identified"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_communication_capacity_assessed,,,ODK Server,11.16,Communication network capacity was assessed
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_emergency_telecom_system_feasibility,,,ODK Server,11.17,A feasability study for establishing an emergency telecommunication system at sub-national level (if necessary) was conducted
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_iu_etu_assessment_against_who,,,ODK Server,11.18,"In country joint assessment of ETC/IU design, workflow & IPC measures against WHO recommended specifications was conducted with the MoH"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_logistics_sops_updated,,,ODK Server,11.19,"Logistics SOPs (supply, procurement, stockpile mobilization, sample transport, telecommunications uses, structures support and maintenance, transport resources mobilization, security management) are updated & approved"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,osl_vaccination_protocols_shared,,,ODK Server,11.20,"Vaccination protocols were developed and shared with logistician, if applicable"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,sdb_sops_revised,,,ODK Server,12.01,Revised SOPS for SDB protocols are developed
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,sdb_team_trained,,,ODK Server,12.02,1 trained SDB & decontamination Team is in place
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,sdb_team_equipped,,,ODK Server,12.03,"SDB team is equipped with SDB & decontamination equipment (tools, body bags, sprayers, chlorine, PPEs)"
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,sdb_transport_mechanism,,,ODK Server,12.04,Dedicated & functional transport mechanism to safely transfer a deceased case to burial site is available
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,sdb_access_grave_diggers,,,ODK Server,12.05,SDBs have access & contacts of grave diggers and local security support during the burial process (if required).
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,sdb_designated_burial_ground,,,ODK Server,12.06,Govt./community have a designated burial ground (where culturally accepted)
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,sdb_sop_reporting,,,ODK Server,12.07,Clear SOP for death alert reporting to SDB teams is defined along with feedback mechanism
+<COUNTRY NAME>,National,<COUNTRY NAME>,2026-Q4,sdb_partners_identified,,,ODK Server,12.08,As needed identify partners (Red Cross for instance) that might be able to support
