@@ -13,33 +13,38 @@ permissions:
   pull-requests: write
 
 jobs:
-  validate:
+  # On every pull request: validate, rebuild src/data/pdx-data.js and commit it to the PR branch,
+  # so the merged PR already contains the updated dashboard data (works with protected main).
+  pr-build:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
-      - name: Validate submissions
-        run: node scripts/build-data.js --check
-      - name: Post validation report
+      - name: Validate and rebuild data
+        run: node scripts/build-data.js
+      - name: Post validation report on the PR
         if: always()
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           path: data/build/validation-report.md
+      - name: Commit rebuilt data to the PR branch
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name "pdx-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/data/pdx-data.js data/build/validation-report.md
+          if git diff --cached --quiet; then echo "Data already up to date"; else git commit -m "data: rebuild dashboard data" && git push; fi
 
-  build:
-    if: github.event_name != 'pull_request'
+  # On main: confirm the merged data is valid (no commits, so branch protection is respected).
+  main-check:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
-      - name: Build src/data/pdx-data.js
-        run: node scripts/build-data.js
-      - name: Commit rebuilt data
-        run: |
-          git config user.name "pdx-data-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add src/data/pdx-data.js data/build/validation-report.md
-          if git diff --cached --quiet; then echo "No data changes"; else git commit -m "data: rebuild dashboard data [skip ci]" && git push; fi
+      - run: node scripts/build-data.js --check
