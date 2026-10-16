@@ -1,0 +1,45 @@
+name: Build dashboard data
+
+on:
+  pull_request:
+    paths: ['data/**', 'scripts/**']
+  push:
+    branches: [main]
+    paths: ['data/**', 'scripts/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Validate submissions
+        run: node scripts/build-data.js --check
+      - name: Post validation report
+        if: always()
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          path: data/build/validation-report.md
+
+  build:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Build src/data/pdx-data.js
+        run: node scripts/build-data.js
+      - name: Commit rebuilt data
+        run: |
+          git config user.name "pdx-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/data/pdx-data.js data/build/validation-report.md
+          if git diff --cached --quiet; then echo "No data changes"; else git commit -m "data: rebuild dashboard data [skip ci]" && git push; fi
